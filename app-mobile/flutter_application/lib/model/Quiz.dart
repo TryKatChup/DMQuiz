@@ -1,5 +1,5 @@
-import 'package:roquiz/model/Answer.dart';
-import 'package:roquiz/model/Question.dart';
+import 'package:dmquiz/model/Answer.dart';
+import 'package:dmquiz/model/Question.dart';
 
 class Quiz {
   List<Question> questions = [];

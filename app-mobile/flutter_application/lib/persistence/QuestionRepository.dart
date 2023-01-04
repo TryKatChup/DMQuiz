@@ -1,12 +1,12 @@
 import 'package:flutter/services.dart';
-import 'package:roquiz/model/Question.dart';
-import 'package:roquiz/model/Answer.dart';
+import 'package:dmquiz/model/Question.dart';
+import 'package:dmquiz/model/Answer.dart';
 import 'dart:io';
 import 'dart:convert';
 
-class QuestionRepository {
-  static const int DEFAULT_ANSWER_NUMBER = 5;
+import 'package:dmquiz/model/Settings.dart';
 
+class QuestionRepository {
   List<Question> questions = [];
   List<String> topics = [];
   List<int> qNumPerTopic = [];
@@ -45,9 +45,17 @@ class QuestionRepository {
                 "Riga ${i + 1}: divisione per argomenti non rilevata (non è presente l'argomento per le prime domande), ma ne è stato trovato uno comunque");
           }
 
-          Question q = Question(lines[i]);
+          // multiline question
+          String qString = lines[i];
+          if (lines[i].endsWith("\\n")) {
+            while (lines[i].endsWith("\\n")) {
+              i++;
+              qString += lines[i];
+            }
+          }
+          Question q = Question(qString);
 
-          for (int j = 0; j < DEFAULT_ANSWER_NUMBER; j++) {
+          for (int j = 0; j < Settings.DEFAULT_ANSWER_NUMBER; j++) {
             i++;
             List<String> splitted = lines[i].split(". ");
             if (splitted.length < 2 || splitted[1].isEmpty) {
@@ -66,7 +74,7 @@ class QuestionRepository {
 
           int asciiValue = lines[i].codeUnitAt(0);
           int value = asciiValue - 65;
-          if (value < 0 || value > DEFAULT_ANSWER_NUMBER - 1) {
+          if (value < 0 || value > Settings.DEFAULT_ANSWER_NUMBER - 1) {
             throw FileSystemException(
                 "Riga ${i + 1}: risposta corretta non valida");
           }

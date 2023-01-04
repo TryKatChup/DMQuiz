@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:roquiz/model/license.dart';
-import 'package:roquiz/widget/licenses_widget.dart';
+import 'package:dmquiz/model/license.dart';
+import 'package:dmquiz/widget/licenses_widget.dart';
 
 class ViewLicenses extends StatelessWidget {
   const ViewLicenses({Key? key}) : super(key: key);

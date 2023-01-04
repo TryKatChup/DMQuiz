@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roquiz/model/palette.dart';
+import 'package:dmquiz/model/palette.dart';
 
 class ThemeProvider extends ChangeNotifier {
   ThemeMode themeMode = ThemeMode.light;

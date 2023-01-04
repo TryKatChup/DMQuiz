@@ -1,16 +1,18 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Settings {
-  static final double VERSION_NUMBER = 1.5;
-  static final String VERSION_SUFFIX = ""; //"-mobile_beta";
-  static final int DEFAULT_QUESTION_NUMBER = 16;
-  static final int DEFAULT_TIMER = 18;
-  static final bool DEFAULT_SHUFFLE_ANSWERS = true;
-  static final bool DEFAULT_DARK_THEME = false;
-  static final bool DEFAULT_CHECK_QUESTIONS_UPDATE = false;
-  static final bool DEFAULT_CHECK_APP_UPDATE = false;
+  static const String APP_TITLE = "DMQuiz";
+  static const String APP_VERSION = "1.0_beta";
+  static const String REPO_LINK = "";
 
-  static final int DEFAULT_ANSWER_NUMBER = 5;
+  static const int DEFAULT_QUESTION_NUMBER = 10;
+  static const int DEFAULT_TIMER = 10;
+  static const bool DEFAULT_SHUFFLE_ANSWERS = true;
+  static const bool DEFAULT_DARK_THEME = false;
+  static const bool DEFAULT_CHECK_QUESTIONS_UPDATE = false;
+  static const bool DEFAULT_CHECK_APP_UPDATE = false;
+
+  static const int DEFAULT_ANSWER_NUMBER = 4;
 
   late int questionNumber = DEFAULT_QUESTION_NUMBER;
   late int timer = DEFAULT_TIMER;

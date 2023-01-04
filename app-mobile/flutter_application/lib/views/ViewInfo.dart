@@ -1,11 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:roquiz/model/Settings.dart';
-import 'package:roquiz/views/ViewCredits.dart';
-import 'package:roquiz/views/ViewLicenses.dart';
-import 'package:roquiz/model/Themes.dart';
-import 'package:roquiz/widget/icon_button_widget.dart';
+import 'package:dmquiz/model/Settings.dart';
+import 'package:dmquiz/views/ViewCredits.dart';
+import 'package:dmquiz/views/ViewLicenses.dart';
+import 'package:dmquiz/model/Themes.dart';
+import 'package:dmquiz/widget/icon_button_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 const DEFAULT_SIZE = 50.0;
@@ -73,12 +73,17 @@ class ViewInfoState extends State<ViewInfo> with TickerProviderStateMixin {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 50),
-              Text(
-                  "ROQuiz v${Settings.VERSION_NUMBER}${Settings.VERSION_SUFFIX}",
-                  style: const TextStyle(
-                      fontSize: 48, fontWeight: FontWeight.bold)),
-              const SizedBox(height: 50),
+              const Spacer(flex: 2),
+              const Text(Settings.APP_TITLE,
+                  style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold)),
+              const Text(
+                "v${Settings.APP_VERSION}",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Spacer(flex: 1),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child:
@@ -112,7 +117,7 @@ class ViewInfoState extends State<ViewInfo> with TickerProviderStateMixin {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ViewCredits()));
+                              builder: (context) => const ViewCredits()));
                     },
                     child: const Text("contributors",
                         textAlign: TextAlign.center,
@@ -154,7 +159,7 @@ class ViewInfoState extends State<ViewInfo> with TickerProviderStateMixin {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ViewLicenses()));
+                              builder: (context) => const ViewLicenses()));
                     },
                     child: const Text("Visualizza le licenze",
                         textAlign: TextAlign.center,
@@ -201,7 +206,7 @@ class ViewInfoState extends State<ViewInfo> with TickerProviderStateMixin {
                       )),
                 ),
               ),
-              const SizedBox(height: 50),
+              const Spacer(flex: 2),
             ],
           ),
         ),

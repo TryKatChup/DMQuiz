@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:roquiz/persistence/QuestionRepository.dart';
-import 'package:roquiz/model/Settings.dart';
-import 'package:roquiz/widget/topics_widget.dart';
+import 'package:dmquiz/persistence/QuestionRepository.dart';
+import 'package:dmquiz/model/Settings.dart';
+import 'package:dmquiz/widget/topics_widget.dart';
 
 import 'ViewQuestions.dart';
 

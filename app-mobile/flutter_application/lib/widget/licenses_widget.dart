@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roquiz/model/license.dart';
+import 'package:dmquiz/model/license.dart';
 
 class LicensesWidget extends StatelessWidget {
   final List<License> licenses;

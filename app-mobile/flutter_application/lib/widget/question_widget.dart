@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roquiz/model/Answer.dart';
+import 'package:dmquiz/model/Answer.dart';
 
 class QuestionWidget extends StatelessWidget {
   const QuestionWidget({
@@ -98,7 +98,7 @@ class QuestionWidget extends StatelessWidget {
               // Question text
               child: Text(
                   (questionNumber != null ? "Q$questionNumber) " : "") +
-                      questionText,
+                      questionText.replaceAll(r'\n', '\n'),
                   style: const TextStyle(fontSize: 16)),
             ),
           ),

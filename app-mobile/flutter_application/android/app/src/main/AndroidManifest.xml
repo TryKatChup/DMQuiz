@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_application">
+    package="it.unibo.dmquiz">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="ROQuiz"
+        android:label="DMQuiz"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

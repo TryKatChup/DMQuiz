@@ -1,4 +1,249 @@
-In Feature Selection,what is the Principal Component Analysis?
+@Machine Learning ======================================================================================
+Which is different from others:
+A. Expectation Maximisation
+B. Apriori
+C. K-means
+D. Decision Tree
+D
+
+What is cross validation:
+A. A technique to obtain a good estimation of the performance of a classifier when it will be used with data different from the training set
+B. A technique to obtain a good estimation of the performance of a classifier with the training set
+C. A technique to improve the quality of a classifier
+D. A technique to improve the speed of a classifier
+A
+
+What is the single linkage?
+A. A method to compute the distance between two objects, it can be used in hierarchical clustering
+B. A method to compute the distance between two sets of items, it can be used in hierarchical clustering
+C. A method to compute the distance between two classes, it can be used in decision trees
+D. A method to compute the separation of the objects inside a cluster
+B
+
+Which of the following characteristic of data can reduce the effectiveness of DBSCAN?
+A. Clusters have concavities
+B. All the variables are the same range of values
+C. Presence of outliers
+D. Presence of clusters with different densities
+D
+
+Which of the following types of data allows the use of the euclidean distance?
+A. Points in a vector space
+B. Ordered data
+C. Transactional data
+D. Document representations
+A
+
+How does pruning work when generating frequent itemsets?
+A. If an itemset is not frequent, then none of its supersets can be frequent, therefore the frequencies of the supersets are not evaluated
+B. If an itemset is frequent, then none of its supersets can be frequent, therefore the frequencies of the supersets are not evaluated
+C. If an itemset is not frequent, then none of its subsets can be frequent, therefore the frequencies of the subsets are not evaluated
+D. If an itemset is frequent, then none of its subsets can be frequent, therefore the frequencies of the subsets are not evaluated
+A
+
+In a decision tree, the number of objects in a node...
+A. ...is smaller than the number of objects in its ancestor
+B. ...is not related to the number of objects in its ancestor
+C. ...is smaller than or equal to the number of objects in its ancestor
+D. ...is bigger than the number of objects in its ancestor
+A
+
+What does K-means try to minimise?
+A. The distortion, that is the sum of the squared distances of each point with respect to the points of the other clusters
+B. The distortion, that is the sum of the squared distances of each point with respect to its centroid
+C. The separation, that is the sum of the squared distances of each point with respect to its centroid
+D. The separation, that is the sum of the squared distances of each cluster centroid with respect to the global centroid of the dataset
+B
+
+Given the following definitions: TP = True Positives; TN = True Negatives; FP = False Positives; FN = False Negatives. Which of the formulas below computes the precision of a binary classifier?
+A. TP / (TP + FP)
+B. (TP + TN) / (TP + FP + TN + FN)
+C. TN / (TN + FP)
+D. TP / (TP + FN)
+A
+
+Given the two binary vectors below, which is their similarity according to the Jaccard Coefficient?\n
+a b c d e f g h i j\n
+1 0 0 0 1 0 1 1 0 1\n
+1 0 1 1 1 0 1 0 1 0
+A. 0.1
+B. 0.2
+C. 0.5
+D. 0.375
+D
+
+Consider the transactional dataset below:\n
+ID Items\n
+1 A,B,C\n
+2 A,B,D\n
+3 B,D,E\n
+4 C,D\n
+5 A,C,D,E\n
+Which is the support of the rule "A,C -> B"?
+A. 100%
+B. 20%
+C. 40%
+D. 50%
+B
+
+Which of the following statements is true?
+A. The noise always generates outliers
+B. The data which are similar to the majority are never noise
+C. The noise can generate outliers
+D. The noise never generates outliers
+C
+
+Which of the following clustering methods is not based on distances between objects?
+A. Hierarchical Agglomerative
+B. DBSCAN
+C. K-Means
+D. Expectation Maximization
+D
+
+In a decision tree, an attribute which is used only in nodes near the leaves...
+A. ...is irrelevant with respect to the target
+B. ...guarantees high increment of purity
+C. ...gives little insight with respect to the target
+D. ...has a high correlation with respect to the target
+C
+
+Which of the statements below is true?
+A. Sometimes k-means stops to a configuration which does not give the minimum distortion for the chosen value of the number of clusters
+B. K-means always stop to a configuration which gives the minimum distortion for the chosen value of the number of clusters
+C. K-means works well also with datasets having a very large number of attributes
+D. K-means finds the number of clusters which give the minimum distortion
+A
+
+Which of the statements below is false?
+A. Increasing the radius of the neighourhood can decrease the number of noise points
+B. DBSCAN always stops to a configuration which gives the optimal number of clusters
+C. Sometimes DBSCAN stops to a configuration which does not include any cluster
+D. DBScan can give good performance when clusters have concavities
+B
+
+In data preparation which is the effect of normalisation?
+A. Map all the numeric attributes to the same range, without altering the distribution, in order to avoid that attributes with large ranges have more influence
+B. Map all the numeric attributes subtracting the respective mean and dividing by variance
+C. Map all the numeric attributes to the same range and to have a Gaussian (or normal) distribution, in order to avoid that attributes with large ranges have more influence
+D. Map all the numeric attributes in order to have a Gaussian (or normal) distruibution, in order to avoid that attributes with large ranges have more influence
+A
+
+Consider the transactional dataset below:\n
+ID Items\n
+1 A,B,C\n
+2 A,B,D\n
+3 B,D,E\n
+4 C,D\n
+5 A,C,D,E\n
+Which is the confidence of the rule "A,C -> B"?
+A. 50%
+B. 40%
+C. 20%
+D. 100%
+A
+
+Which of the statements below about Hierarchical Agglomerative Clustering is true?
+A. Requires the definition of Inertia of clusters
+B. Requires the definition of distance between sets of objects
+C. Is very efficient also with large datasets
+D. Is based on a well founded statistical model
+B
+
+When training a neural network, what is the learning rate?
+A. The speed of convergence to a stable solution during the learning process
+B. The ratio between the size of the hidden layer and the input layer of the network
+C. The slope of the activation function in a specific node
+D. A multiplying factor of the correction to be applied to the connection weights
+D
+
+What are the hyperparameters of a Neural Network? (Possibly non exhaustive)
+A. Hidden layers structure, Output layer structure, Activation function, Number of epochs
+B. Network structure, Learning rate, Backpropagation algorithm, Number of epochs
+C. Input layers structure, Learning rate, Activation function, Number of epochs
+D. Hidden layers structure, Learning rate, Activation function, Number of epochs
+D
+
+Which of the following preprocessing activities is useful to build a Naive Bayes classifier if the independence hypothesis is violated:
+A. Discretisation
+B. Normalisation
+C. Standardisation
+D. Feature selection
+D
+
+Which is different from the others?
+A. Silhouette Index
+B. Misclassification Error
+C. Entropy
+D. Gini Index
+A
+
+Why do we prune a decision tree?
+A. To eliminate parts of the tree where the decisions could be influenced by random effects
+B. To eliminate rows of the dataset which could be influenced by random effects
+C. To eliminate parts of the tree where the decision could generate underfitting
+D. To eliminate attributes which could be influenced by random effects
+A
+
+In a dataset with D attributes, how many subsets of attributes should be considered for feature selection according ot an exhaustive search?
+A. O(2^D)
+B. O(D!)
+C. O(D)
+D. O(D^2)
+A
+
+In which mining activity the Information Gain can be useful?
+A. Discovery of association rules
+B. Classification
+C. Clustering
+D. Discretization
+B
+
+Given the two binary vectors below, which is their similarity according to the Simple Matching Coefficient?\n
+a b c d e f g h i j\n
+1 0 0 0 1 0 1 1 0 1\n
+1 0 1 1 1 0 1 0 1 0
+A. 0.1
+B. 0.3
+C. 0.5
+D. 0.2
+C
+
+Which is the main reason for the standardization of numeric attributes?
+A. Change the distribution of the numeric attributes, in order to obtain gaussian distributions
+B. Map all the numeric attributes to a new range such that the mean is zero and the variance is one
+C. Mapp all the nominal attributes to the same range, in order to prevent the values with higher frequency from having prevailing influence
+D. Remove non-standard values
+B
+
+Which of the following measure can be used as an alternative to the Information Gain?
+A. Sihlouette Index
+B. Gini Index
+C. Rand Index
+D. Jaccard Index
+B
+
+Which of the following is not an objective of feature selection
+A. Select the features with higher range, which have more influence on the computation
+B. Reduce time and memory complexity of the mining algorithms
+C. Reduce the effect of noise
+D. Avoid the curse of dimensionality
+A
+
+After fitting DBSCAN with the default parameter values the results are: 0 clusters, 100% of noise points. Which will be your next trial?
+A. Reduce the minimum number of objects in the neighborhood or increase the radius of the neighborhood
+B. Reduce the minimum number of objects in the neighborhood and the radius of the neighborhood
+C. Decrease the radius of the neighborhood
+D. None of the others
+A
+
+What is the meaning of the statement "the support is anti-monotone"?
+A. The support of an itemset never exceeds the support if its subsets
+B. The support of an itemset is always smaller than the support of its supersets
+C. The support of an itemsets never exceeds the support if its supersets
+D. The support of an itemset is always smaller than the support of its subsets
+A
+
+In Feature Selection, what is the Principal Component Analysis?
 A. A mathematical technique used to transform non numeric attributes into numeric attributes
 B. A mathematical technique used to transform a set of numeric attributes into a smaller set of numeric attributes which capture most of the variability in data
 C. A heuristic technique used to find a subset of the attributes which produces the same classifier
@@ -11,7 +256,6 @@ B. A tree-structured plan of tests on single attributes to forecast the target
 C. A tree-structured plan of tests on single attributes to obtain the maximum purity of a node
 D. A tree-structured plan of tests on multiple attributes to forecast the target
 B
-
 
 In data preprocessing, which of the following are NOT the objectives of the Aggregation of attributes?
 A. Obtain a more detailed description of data
@@ -34,7 +278,13 @@ C. Reduce the variability of the data
 D. Classifying an object containing attribute values which are missing from some classes in the test set
 A
 
-Consider the transactional dataset below. Which is the Confidence of the rule B -> E ?~nID Items~n1 A,B,C~n2 A,B,D~n3 B,D,E~n4 C,D~n5 A,C,D,E
+Consider the transactional dataset below. Which is the Confidence of the rule "B -> E"?\n
+ID Items\n
+1 A,B,C\n
+2 A,B,D\n
+3 B,D,E\n
+4 C,D\n
+5 A,C,D,E
 A. 100%
 B. 50%
 C. 33%
@@ -55,21 +305,21 @@ C. Confidence
 D. Conviction
 A
 
-Name the following rule evaluation formula: conf(A->C)/sup(C)
+Name the following rule evaluation formula: conf(A->C) / sup(C)
 A. Leverage
 B. Lift
 C. Confidence
 D. Conviction
 B
 
-Name the following rule evaluation formula: sup(A->C)/sup(A)
+Name the following rule evaluation formula: sup(A->C) / sup(A)
 A. Leverage
 B. Lift
 C. Confidence
 D. Conviction
 C
 
-Name the following rule evaluation formula: [1- sup(C)]/[1-conf(A->C)]
+Name the following rule evaluation formula: [1 - sup(C)] / [1 - conf(A->C)]
 A. Leverage
 B. Lift
 C. Confidence
@@ -125,28 +375,28 @@ C. The support of a rule can be computed given the confidence of the rule
 D. The confidence of an itemset is anti-monotonic with respect to the composition of the itemset
 B
 
-For this type of data choose the best suited distance function: Vector space with real values
+Choose the best suited distance function for this type of data: Vector space with real values
 A. Euclidean distance
 B. Cosine distance
 C. Manhattan distance
 D. Jaccard coefficient
 A
 
-For this type of data choose the best suited distance function: Vectors of terms representing documents
+Choose the best suited distance function for this type of data: Vectors of terms representing documents
 A. Euclidean distance
 B. Cosine distance
 C. Manhattan distance
 D. Jaccard coefficient
 B
 
-For this type of data choose the best suited distance function: High dimensional spaces
+Choose the best suited distance function for this type of data: High dimensional spaces
 A. Euclidean distance
 B. Cosine distance
 C. Manhattan distance
 D. Jaccard coefficient
 C
 
-For this type of data choose the best suited distance function: Boolean data
+Choose the best suited distance function for this type of data: Boolean data
 A. Euclidean distance
 B. Cosine distance
 C. Manhattan distance
@@ -155,7 +405,7 @@ D
 
 Which of the following IS NOT a strength point of DBSCAN with respect to K-Means
 A. The Robustness with respect to outliers
-B. The Effectiveness, even in presence of 𝘯𝘰𝘪𝘴𝘦
+B. The Effectiveness, even in presence of noise
 C. The Effectiveness even if there are clusters with non-convex shape
 D. The Efficiency even in large datasets
 D

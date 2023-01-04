@@ -1,701 +1,509 @@
-@Programmazione Matematica =============================================================================
-Dato un insieme F, un intorno è
-A. L'insieme di tutti i sottoinsiemi di F
-B. L'insieme dei punti di F a distanza minore di epsilon da un punto x di F
-C. Una funzione N: F -> 2^F
-D. Una combinazione convessa di due punti x e y di F
-E. Nessuna di queste
-C
-
-Si consideri un problema di ottimizzazione (F,d) ed un intorno N. La proprietà che se un punto f di F è localmente ottimo rispetto ad N allora f è l'ottimo assoluto implica
-A. che N è un intorno esatto
-B. che N è un intorno euclideo
-C. che N è un intorno non euclideo
-D. nessuna di queste caratterizzazioni
-E. che N è un intorno convesso
-A
-
-Facendo variare lambda fra 0 e 1, la combinazione convessa di due punti x ed y descrive
-A. tutti i punti della semiretta che origina in x e passa per y
-B. tutti i punti della retta passante per x ed y
-C. tutti i punti del segmento [x,y]
-D. il punto centrale del segmento [x,y]
-E. tutti i punti della semiretta che origina in y e passa per x
-C
-
-Data una funzione f convessa su un insieme S convesso, la corda che unisce due punti della funzione:
-A. coincide con un flesso della funzione.
-B. sta al di sotto della funzione ma non coincide mai con essa.
-C. sta al di sopra della funzione ma non coincide mai con essa.
-D. sta al di sopra della funzione o è con essa coincidente.
-E. sta al di sotto della funzione o è con essa coincidente.
+@Machine Learning ======================================================================================
+Which is different from others:
+A. Expectation Maximisation
+B. Apriori
+C. K-means
+D. Decision Tree
 D
 
-Dati una funzione convessa definita su un insieme S convesso ed una soglia t, il sottoinsieme di punti x di S in cui f(x) <= t :
-A. è concavo
-B. è un intorno euclideo
-C. è convesso
-D. è un intorno esatto
-E. è il complemento di S
-C
+What is cross validation:
+A. A technique to obtain a good estimation of the performance of a classifier when it will be used with data different from the training set
+B. A technique to obtain a good estimation of the performance of a classifier with the training set
+C. A technique to improve the quality of a classifier
+D. A technique to improve the speed of a classifier
+A
 
-@Programmazione Lineare ================================================================================
-Un insieme di colonne di una matrice intera A m x n non è linearmente indipendente se:
-A. la loro combinazione lineare che produce il vettore nullo ha tutti i coefficienti nulli
-B. ogni colonna può essere espressa come combinazione lineare delle altre
-C. la sottomatrice corrispondente non è singolare
-D. il determinante della matrice corrispondente è diverso da zero
-E. nessuna colonna può essere espressa come combinazione lineare delle altre
+What is the single linkage?
+A. A method to compute the distance between two objects, it can be used in hierarchical clustering
+B. A method to compute the distance between two sets of items, it can be used in hierarchical clustering
+C. A method to compute the distance between two classes, it can be used in decision trees
+D. A method to compute the separation of the objects inside a cluster
 B
 
-Un insieme di m colonne di una matrice intera A m x n è linearmente indipendente se:
-A. la sottomatrice corrispondente è singolare.
-B. il determinante della matrice corrispondente è nullo.
-C. al massimo una colonna può essere espressa come combinazione lineare delle altre.
-D. una loro combinazione lineare con coefficienti non tutti nulli può produrre il vettore nullo.
-E. nessuna colonna può essere espressa come combinazione lineare delle altre.
-E
-
-Quale di queste non è un'assunzione che l'algoritmo del Simplesso deve verificare prima di poter operare?
-A. Si considera sempre la forma standard con m<n.
-B. La regione ammissibile F non è vuota.
-C. La matrice A contiene m colonne linearmente indipendenti, ha cioè rango m.
-D. La SBA iniziale non deve essere degenere.
-E. Nessuna di queste.
+Which of the following characteristic of data can reduce the effectiveness of DBSCAN?
+A. Clusters have concavities
+B. All the variables are the same range of values
+C. Presence of outliers
+D. Presence of clusters with different densities
 D
 
-Una variabile libera in segno può essere sostituita equivalentemente da:
-A. la differenza fra una variabile non positiva ed una non negativa.
-B. la differenza fra due variabili non negative.
-C. la somma di due variabili non positive.
-D. la somma di due variabili non negative.
-E. la differenza fra una variabile non negativa e una non positiva.
-B
-
-Un vincolo espresso come Ax = b in forma standard equivale, in forma canonica, a
-A. Ax <=b, Ax >=b
-B. Ax < b
-C. Ax > b
-D. Ax >= b, Ax < b
-E. Nessuna di queste
+Which of the following types of data allows the use of the euclidean distance?
+A. Points in a vector space
+B. Ordered data
+C. Transactional data
+D. Document representations
 A
 
-Dati un vettore di parametri a ed un vettore di incognite x, una disequazione della forma a'x <= b è equivalente a
-A. a'x <= b, a'x + s = b, s >= 0.
-B. a'x - s = b, s >= 0. 
-C. a'x + s = b, s <= 0.
-D. a'x + s = b, s >= 0.
-E. Nessuna di queste.
+How does pruning work when generating frequent itemsets?
+A. If an itemset is not frequent, then none of its supersets can be frequent, therefore the frequencies of the supersets are not evaluated
+B. If an itemset is frequent, then none of its supersets can be frequent, therefore the frequencies of the supersets are not evaluated
+C. If an itemset is not frequent, then none of its subsets can be frequent, therefore the frequencies of the subsets are not evaluated
+D. If an itemset is frequent, then none of its subsets can be frequent, therefore the frequencies of the subsets are not evaluated
+A
+
+In a decision tree, the number of objects in a node...
+A. ...is smaller than the number of objects in its ancestor
+B. ...is not related to the number of objects in its ancestor
+C. ...is smaller than or equal to the number of objects in its ancestor
+D. ...is bigger than the number of objects in its ancestor
+A
+
+What does K-means try to minimise?
+A. The distortion, that is the sum of the squared distances of each point with respect to the points of the other clusters
+B. The distortion, that is the sum of the squared distances of each point with respect to its centroid
+C. The separation, that is the sum of the squared distances of each point with respect to its centroid
+D. The separation, that is the sum of the squared distances of each cluster centroid with respect to the global centroid of the dataset
+B
+
+Given the following definitions: TP = True Positives; TN = True Negatives; FP = False Positives; FN = False Negatives. Which of the formulas below computes the precision of a binary classifier?
+A. TP / (TP + FP)
+B. (TP + TN) / (TP + FP + TN + FN)
+C. TN / (TN + FP)
+D. TP / (TP + FN)
+A
+
+Given the two binary vectors below, which is their similarity according to the Jaccard Coefficient?\n
+a b c d e f g h i j\n
+1 0 0 0 1 0 1 1 0 1\n
+1 0 1 1 1 0 1 0 1 0
+A. 0.1
+B. 0.2
+C. 0.5
+D. 0.375
 D
 
-Si consideri un sistema di equazioni lineari della forma Ax = b, con A matrice m x n di rango m. Il sistema ha
-A. infinite soluzioni se m = n
-B. infinite soluzioni se m > n
-C. una sola soluzione se m = n
-D. una sola soluzione se m > n
-E. nessuna delle precedenti
+Consider the transactional dataset below:\n
+ID Items\n
+1 A,B,C\n
+2 A,B,D\n
+3 B,D,E\n
+4 C,D\n
+5 A,C,D,E\n
+Which is the support of the rule "A,C -> B"?
+A. 100%
+B. 20%
+C. 40%
+D. 50%
+B
+
+Which of the following statements is true?
+A. The noise always generates outliers
+B. The data which are similar to the majority are never noise
+C. The noise can generate outliers
+D. The noise never generates outliers
 C
 
-Cosa è una base di una matrice A?
-A. Un sottoinsieme di colonne di A.
-B. Un sottoinsieme di colonne di A linearmente indipendenti.
-C. Un sottoinsieme di m colonne di A (m rango di A).
-D. Un sottoinsieme di m colonne di A linearmente indipendenti (m rango di A).
-E. Nessuna di queste.
+Which of the following clustering methods is not based on distances between objects?
+A. Hierarchical Agglomerative
+B. DBSCAN
+C. K-Means
+D. Expectation Maximization
 D
 
-Data una matrice intera A m x n, una sua base è costituita da
-A. un insieme di m colonne
-B. un insieme di m colonne linearmente indipendenti
-C. un insieme di m colonne la cui matrice quadrata corrispondente è singolare
-D. un insieme di m colonne linearmente dipendenti
-E. nessuna di queste
-B
-
-Una soluzione base corrispondente ad una sottomatrice base B di una matrice A m x n si ottiene:
-A. azzerando tutte le variabili e risolvendo il sistema risultante
-B. azzerando le variabili base e risolvendo il sistema risultante
-C. azzerando le variabili fuori base e risolvendo il sistema risultante
-D. dando un valore non nullo alle variabili fuori base e risolvendo il sistema risultante
-E. nessuna di queste
+In a decision tree, an attribute which is used only in nodes near the leaves...
+A. ...is irrelevant with respect to the target
+B. ...guarantees high increment of purity
+C. ...gives little insight with respect to the target
+D. ...has a high correlation with respect to the target
 C
 
-Quale tra le seguenti è la definizione di politopo?
-A. Regione in cui la combinazione convessa di ciascun punto appartiene sempre alla regione.
-B. Intersezione di un numero finito di semispazi.
-C. Combinazione convessa di un numero finito di vertici.
-D. Regione ammissibile che ha come punti ottimi i vertici.
-E. Nessuna di queste.
+Which of the statements below is true?
+A. Sometimes k-means stops to a configuration which does not give the minimum distortion for the chosen value of the number of clusters
+B. K-means always stop to a configuration which gives the minimum distortion for the chosen value of the number of clusters
+C. K-means works well also with datasets having a very large number of attributes
+D. K-means finds the number of clusters which give the minimum distortion
+A
+
+Which of the statements below is false?
+A. Increasing the radius of the neighourhood can decrease the number of noise points
+B. DBSCAN always stops to a configuration which gives the optimal number of clusters
+C. Sometimes DBSCAN stops to a configuration which does not include any cluster
+D. DBScan can give good performance when clusters have concavities
 B
 
-Sia P un politopo, H un generico iperpiano, HS uno dei due semispazi generati da H. Insieme dei punti f = intersezione tra P e HS è detta:
-A. Politopo convesso ammissibile
-B. Regione ammissibile
-C. Faccia del politopo se f non vuoto e contenuto in H
-D. Insieme di punti ottimi contenuti in H
-E. Nessuna di queste
-C
+In data preparation which is the effect of normalisation?
+A. Map all the numeric attributes to the same range, without altering the distribution, in order to avoid that attributes with large ranges have more influence
+B. Map all the numeric attributes subtracting the respective mean and dividing by variance
+C. Map all the numeric attributes to the same range and to have a Gaussian (or normal) distribution, in order to avoid that attributes with large ranges have more influence
+D. Map all the numeric attributes in order to have a Gaussian (or normal) distruibution, in order to avoid that attributes with large ranges have more influence
+A
 
-Relativamente all'affermazione 'ogni punto di un politopo è combinazione convessa dei vertici':
-A. Vale solo in caso di vertici ottimi.
-B. E' corretta.
-C. Vale solo se la combinazione è stretta.
-D. E' errata.
-E. Nessuna di queste.
+Consider the transactional dataset below:\n
+ID Items\n
+1 A,B,C\n
+2 A,B,D\n
+3 B,D,E\n
+4 C,D\n
+5 A,C,D,E\n
+Which is the confidence of the rule "A,C -> B"?
+A. 50%
+B. 40%
+C. 20%
+D. 100%
+A
+
+Which of the statements below about Hierarchical Agglomerative Clustering is true?
+A. Requires the definition of Inertia of clusters
+B. Requires the definition of distance between sets of objects
+C. Is very efficient also with large datasets
+D. Is based on a well founded statistical model
 B
 
-La combinazione convessa stretta di due punti distinti x ed y di un politopo convesso è:
-A. un vertice del politopo.
-B. un punto del politopo non coincidente con un vertice.
-C. il punto centrale del politopo.
-D. un punto esterno al politopo.
-E. Nessuna di queste.
-B
-
-Dato un politopo P definito dai vincoli di un LP, condizione necessaria e sufficiente perché un punto sia un vertice è che:
-A. La sua combinazione convessa con un qualunque altro punto del politopo appartenga ancora al politopo.
-B. La relativa soluzione x abbia componenti positivi.
-C. Il politopo sia limitato e non vuoto.
-D. La corrispondente soluzione x sia una soluzione base ammissibile.
-E. Nessuna di queste.
+When training a neural network, what is the learning rate?
+A. The speed of convergence to a stable solution during the learning process
+B. The ratio between the size of the hidden layer and the input layer of the network
+C. The slope of the activation function in a specific node
+D. A multiplying factor of the correction to be applied to the connection weights
 D
 
-Quale tra queste affermazioni è errata?
-A. Ogni punto del politopo è combinazione convessa dei vertici.
-B. Ogni combinazione convessa dei vertici è un punto del politopo.
-C. Un vertice è combinazione convessa stretta di due punti distinti del politopo.
-D. Un vertice non è combinazione convessa stretta di due punti distinti del politopo.
-E. Nessuna di queste.
-C
-
-Quale tra queste affermazioni è errata?
-A. L'intersezione di un numero finito di iperpiani è un politopo (convesso).
-B. La dimensione di un politopo è la minima dimensione di uno spazio che lo può contenere.
-C. Una faccia di dimensione 1 viene detta spigolo.
-D. Un vertice non è combinazione convessa stretta di due punti distinti del politopo.
-E. Nessuna di queste.
-A
-
-Dato il politopo definito dai vincoli di un LP, una combinazione convessa di vertici ottimi è:
-A. ottima solo se la combinazione convessa è stretta
-B. non ottima
-C. ottima sotto particolari condizioni
-D. sempre ottima
-E. nessuna di queste
+What are the hyperparameters of a Neural Network? (Possibly non exhaustive)
+A. Hidden layers structure, Output layer structure, Activation function, Number of epochs
+B. Network structure, Learning rate, Backpropagation algorithm, Number of epochs
+C. Input layers structure, Learning rate, Activation function, Number of epochs
+D. Hidden layers structure, Learning rate, Activation function, Number of epochs
 D
 
-Una SBA si dice degenere se:
-A. Contiene più di m-n variabili con valore zero.
-B. Contiene più di n-m variabili con valore zero.
-C. Esistono fuori base variabili con valore zero.
-D. Non c'è nessuna variabile con valore zero.
-E. Nessuna di queste
-B
-
-Se due basi producono la stessa soluzione base ammissibile x, allora x contiene:
-A. meno di n zeri.
-B. n-m zeri.
-C. meno di n-m zeri.
-D. più di m zeri.
-E. più di n-m zeri.
-E
-
-Quale di queste affermazioni è errata?
-A. Un insieme S si dice convesso se dati due qualunque punti di S, la combinazione convessa di questi appartiene ancora ad S.
-B. Una funzione c si dice convessa su un insieme convesso S se il valore della funzione nella combinazione convessa di due qualunque punti di S è maggiore o uguale alla combinazione convessa del valore della funzione nei due punti.
-C. Dato un qualunque problema LP, esiste sempre un vertice ottimo.
-D. Se due basi distinte producono la stessa SBA x, allora x è degenere.
-E. Nessuna di queste.
-B
-
-Quale tra queste affermazioni è errata?
-A. Ogni combinazione convessa di vertici ottimi è ottima.
-B. Dato un LP non è detto che esista un punto ottimo; se esiste allora questo è un vertice.
-C. L'insieme dei vincoli di un LP è un politopo.
-D. La regione ammissibile di un LP è un politopo.
-E. Nessuna di queste.
-B
-
-@Algoritmo del Simplesso ===============================================================================
-Se yij è minore o uguale a 0 per ogni i, in relazione a theta, cosa succede?
-A. Viene violata assunzione 0 (forma standard con m<n).
-B. Viene violata assunzione 1 (A di rango m).
-C. Viene violata assunzione 2 (F non vuota).
-D. Viene violata assunzione 3 (F limitata in direzione di decrescenza della funzione obiettivo).
-E. Nessuna di queste.
+Which of the following preprocessing activities is useful to build a Naive Bayes classifier if the independence hypothesis is violated:
+A. Discretisation
+B. Normalisation
+C. Standardisation
+D. Feature selection
 D
 
-Cosa significa se nel calcolo di theta max c'è un caso di parità?
-A. La soluzione attuale era degenere.
-B. La nuova soluzione è degenere.
-C. La nuova soluzione avrà costo maggiore.
-D. Niente di particolare, si prosegue scegliendo l'indice minimo.
-E. Nessuna di queste.
+Which is different from the others?
+A. Silhouette Index
+B. Misclassification Error
+C. Entropy
+D. Gini Index
+A
+
+Why do we prune a decision tree?
+A. To eliminate parts of the tree where the decisions could be influenced by random effects
+B. To eliminate rows of the dataset which could be influenced by random effects
+C. To eliminate parts of the tree where the decision could generate underfitting
+D. To eliminate attributes which could be influenced by random effects
+A
+
+In a dataset with D attributes, how many subsets of attributes should be considered for feature selection according ot an exhaustive search?
+A. O(2^D)
+B. O(D!)
+C. O(D)
+D. O(D^2)
+A
+
+In which mining activity the Information Gain can be useful?
+A. Discovery of association rules
+B. Classification
+C. Clustering
+D. Discretization
 B
 
-In un tableau del simplesso primale, gli elementi della colonna 0 righe da 1 a m:
-A. contengono i valori attuali delle sole variabili base
-B. sono tutti nulli
-C. contengono i valori attuali di tutte le variabili
-D. contengono i costi relativi
-E. contengono i valori ottimi delle sole variabili base
-A
-
-Cosa contiene il tableau a qualunque iterazione?
-A. Rappresentazione compatta dei coefficienti del sistema AX = b.
-B. Informazioni sui costi e valori delle soluzioni di base ammissibili.
-C. Rappresentazione compatta dei vincoli di un problema di LP.
-D. Rappresentazione compatta dei valori delle soluzioni.
-E. Nessuna di queste.
-A
-
-Quale colonna conviene far entrare in base in un cambiamento di base?
-A. Colonna con tutti elementi positivi.
-B. Colonna con costo relativo positivo.
-C. Colonna con costo relativo negativo.
-D. Colonna con tutti elementi negativi.
-E. Nessuna di queste.
+Given the two binary vectors below, which is their similarity according to the Simple Matching Coefficient?\n
+a b c d e f g h i j\n
+1 0 0 0 1 0 1 1 0 1\n
+1 0 1 1 1 0 1 0 1 0
+A. 0.1
+B. 0.3
+C. 0.5
+D. 0.2
 C
 
-In un tableau del simplesso primale, gli elementi della riga 0 (colonne da 1 a n):
-A. sono tutti nulli.
-B. possono avere segno qualunque.
-C. sono tutti non negativi.
-D. sono tutti positivi o nulli.
-E. Nessuna di queste.
+Which is the main reason for the standardization of numeric attributes?
+A. Change the distribution of the numeric attributes, in order to obtain gaussian distributions
+B. Map all the numeric attributes to a new range such that the mean is zero and the variance is one
+C. Mapp all the nominal attributes to the same range, in order to prevent the values with higher frequency from having prevailing influence
+D. Remove non-standard values
 B
 
-Cosa contiene un tableau nella posizione di riga 0 e colonna 0?
-A. Costo relativo della colonna 0.
-B. Il valore z0 della soluzione base attuale.
-C. Il profitto della colonna 0.
-D. L'opposto di z0 della soluzione base attuale.
-E. Nessuna di queste.
+Which of the following measure can be used as an alternative to the Information Gain?
+A. Sihlouette Index
+B. Gini Index
+C. Rand Index
+D. Jaccard Index
+B
+
+Which of the following is not an objective of feature selection
+A. Select the features with higher range, which have more influence on the computation
+B. Reduce time and memory complexity of the mining algorithms
+C. Reduce the effect of noise
+D. Avoid the curse of dimensionality
+A
+
+After fitting DBSCAN with the default parameter values the results are: 0 clusters, 100% of noise points. Which will be your next trial?
+A. Reduce the minimum number of objects in the neighborhood or increase the radius of the neighborhood
+B. Reduce the minimum number of objects in the neighborhood and the radius of the neighborhood
+C. Decrease the radius of the neighborhood
+D. None of the others
+A
+
+What is the meaning of the statement "the support is anti-monotone"?
+A. The support of an itemset never exceeds the support if its subsets
+B. The support of an itemset is always smaller than the support of its supersets
+C. The support of an itemsets never exceeds the support if its supersets
+D. The support of an itemset is always smaller than the support of its subsets
+A
+
+In Feature Selection, what is the Principal Component Analysis?
+A. A mathematical technique used to transform non numeric attributes into numeric attributes
+B. A mathematical technique used to transform a set of numeric attributes into a smaller set of numeric attributes which capture most of the variability in data
+C. A heuristic technique used to find a subset of the attributes which produces the same classifier
+D. A mathematical technique used to find the principal attributes which determine the classification process
+B
+
+A Decision Tree is...
+A. A tree-structured plan of tests on single attributes to forecast the cluster 
+B. A tree-structured plan of tests on single attributes to forecast the target
+C. A tree-structured plan of tests on single attributes to obtain the maximum purity of a node
+D. A tree-structured plan of tests on multiple attributes to forecast the target
+B
+
+In data preprocessing, which of the following are NOT the objectives of the Aggregation of attributes?
+A. Obtain a more detailed description of data
+B. Obtain a less detailed scale
+C. Reduce the variability of data
+D. Reduce the number of attributes or distinct values
+A
+
+In order to reduce the dimensionality of a dataset, which is the advantage of Multi Dimensional Scaling (MDS), with respect to Principal Component Analysis (PCA)
+A. MDS requires less computational power
+B. MDS can be used also with categorical data, provided that the matrix of the distance is available, while PCA is limited to vector spaces
+C. MDS can be used with categorical data after a transformation in a vector space
+D. MDS can work on any kind of data, while PCA is limited to categorical data
+B
+
+What is the main purpose of Smoothing in Bayesian classification?
+A. Classifying an object containing attribute values which are missing from some classes in the training set
+B. Dealing with missing values
+C. Reduce the variability of the data
+D. Classifying an object containing attribute values which are missing from some classes in the test set
+A
+
+Consider the transactional dataset below. Which is the Confidence of the rule "B -> E"?\n
+ID Items\n
+1 A,B,C\n
+2 A,B,D\n
+3 B,D,E\n
+4 C,D\n
+5 A,C,D,E
+A. 100%
+B. 50%
+C. 33%
+D. 20%
+C
+
+In a Decision Tree for classification, what is a Leaf Node?
+A. A node which assigns a class value to the objects passing the tests on the path from the root to the node itself
+B. A node where all the objects belong to the same class
+C. A node which allows classification without errors
+D. A node which assigns a class value only by majority of examples
+A
+
+Name the following rule evaluation formula: sup(AuC) - sup(A)sup(C)
+A. Leverage
+B. Lift
+C. Confidence
+D. Conviction
+A
+
+Name the following rule evaluation formula: conf(A->C) / sup(C)
+A. Leverage
+B. Lift
+C. Confidence
+D. Conviction
+B
+
+Name the following rule evaluation formula: sup(A->C) / sup(A)
+A. Leverage
+B. Lift
+C. Confidence
+D. Conviction
+C
+
+Name the following rule evaluation formula: [1 - sup(C)] / [1 - conf(A->C)]
+A. Leverage
+B. Lift
+C. Confidence
+D. Conviction
 D
 
-Cosa dice il criterio di ottimalità?
-A. Se il costo relativo j-esimo è maggiore o uguale a 0 per ogni j, allora la soluzione attuale è ottima.
-B. Se il costo relativo j-esimo è positivo per ogni j, allora la soluzione attuale è ottima.
-C. Se i valori delle variabili base sono tutti positivi o nulli, allora la soluzione attuale è ottima.
-D. Se il valore z0 è negativo, allora la soluzione attuale è ottima.
-E. Nessuna di queste.
+Which of the statements below best describes the strategy of Apriori in finding the frequent itemsets?
+A. Evaluation of the support of the itemsets in an order such that uninteresting parts of the search space are considered only at the end of the execution
+B. Evaluation of the confidence of the itemsets in an order such that uninteresting parts of the search space are pruned as soon as possible 
+C. Evaluation of the support of the itemsets in an order such that uninteresting parts of the search space are pruned as soon as possible
+D. Evaluation of the support of the itemsets in an order such that the interesting parts of the search space are pruned as soon as possible
+C
+
+What is the Gini Index?
+A. A measure of the Entropy of a dataset
+B. An accuracy measure of a dataset alternative to the Information Gain and to the Misclassification Index
+C. An impurity measure of a dataset alternative to the Information Gain and to the Misclassification Index
+D. An impurity measure of a dataset alternative to Overfitting and Underfitting
+C
+
+What measure is maximised by the Expectation Maximisation algorithm for clustering? 
+A. The likelihood of a class label, given the attributes of the example
+B. The likelihood of an attribute, given the class label
+C. The likelihood of an example
+D. The support of a class
 A
 
-Cosa afferma la regola di Dantzig?
-A. Entra in base la colonna Aj con il costo Cj più negativo.
-B. Entra in base la colonna Aj di indice minimo con costo Cj negativo.
-C. Entra in base la prima colonna Aj con costo Cj negativo. In caso di parità, esce dalla base la colonna Aj di indice minimo.
-D. Esce dalla base la colonna Aj con il costo Cj più negativo.
-E. Nessuna di queste
-A
-
-Nell'operazione di pivoting del simplesso primale, in caso di parità nella scelta del pivot, la nuova soluzione base:
-A. può essere peggiore della soluzione base attuale.
-B. coincide sempre con la soluzione base attuale.
-C. non è mai degenere.
-D. può essere non ammissibile.
-E. Nessuna di queste.
-E
-
-Nell'algoritmo del simplesso primale, utilizzare ad ogni iterazione la regola di Dantzig:
-A. non garantisce nulla
-B. garantisce la convergenza dell'algoritmo nel numero minimo di iterazioni
-C. garantisce la convergenza dell'algoritmo
-D. garantisce il massimo decremento locale del valore della soluzione
-E. nessuna di queste
-A
-
-Sia v il vertice del politopo corrispondente alla base attuale B. Se B è degenere, un'operazione di pivoting del simplesso primale sposta la soluzione ad un vertice, che è:
-A. sempre diverso da v.
-B. diverso da v oppure coincidente con v, dipende dal tableau attuale.
-C. coincidente con v se il determinante di B è nullo.
-D. sempre coincidente con v.
-E. diverso da v purché il determinante di B sia positivo.
+Given the following definitions: TP = True Positives; TN = True Negatives; FP = False Positives; FN = False Negatives. Which of the formulas below computes the accuracy of a binary classifier?
+A. TN / (TN + FP) 
+B. (TP + TN) / (TP + FP + TN + FN)
+C. TP / (TP + FN)
+D. TP / (TP + FP)
 B
 
-Sia v il vertice del politopo corrispondente alla base attuale B. Se B non è degenere, un'operazione di pivoting del simplesso primale sposta la soluzione ad un vertice che è:
-A. diverso da v oppure coincidente da v, non si può dire
-B. coincidente con v se il determinante di B è nullo
-C. sempre diverso da v
-D. diverso da v purchè il determinante di B sia positivo
-E. coincidente con v se il determinante di B è non negativo
-C
-
-In cosa consiste la Fase 1 dell'algoritmo del Simplesso?
-A. Eliminare le variabili artificiali.
-B. Minimizzare la funzione obiettivo originale.
-C. Determinare una SBA iniziale.
-D. Azzerare i costi relativi originali.
-E. Nessuna di queste.
-C
-
-Nel metodo delle due fasi, se al termine della fase 1 la soluzione ha valore negativo:
-A. si è ottenuta una soluzione base ammissibile per il problema originale.
-B. significa che la soluzione ottima è illimitata.
-C. significa che il problema originale è impossibile.
-D. si è trovata la soluzione ottima del problema originale.
-E. Nessuna di queste.
-E
-
-Se la soluzione del problema artificiale della fase 1 del simplesso ha valore nullo:
-A. E' sempre possibile proseguire con la fase 2, a patto di eliminare le variabili artificiali, sostituire la funzione obiettivo con quella del costo originale e azzerare i costi relativi in corrispondenza delle basi o ridurre la dimensione della base.
-B. Non è detto che sia sempre possibile proseguire con la fase 2.
-C. Si prosegue con la fase 2 senza nessun tipo di operazione preliminare.
-D. Il problema originale non ha soluzione ammissibile.
-E. Nessuna di queste.
-A
-
-Cosa significa se la soluzione del problema artificiale ha valore positivo?
-A. Violata assunzione 0 (forma standard con m<n).
-B. Violata assunzione 1 (A di rango m).
-C. Violata assunzione 2 (F non vuota).
-D. Violata assunzione 3 (F limitata in direzione di decrescenza della funzione obiettivo).
-E. Nessuna di queste.
-C
-
-Nel metodo delle due fasi, se al termine della fase 1 la soluzione ha valore positivo
-A. significa che la soluzione ottima è illimitata
-B. sotto determinate condizioni si è ottenuta una soluzione base ammissibile per il problema originale
-C. si è trovata la soluzione ottima del problema originale
-D. si è ottenuta una soluzione base ammissibile per il problema originale
-E. significa che il problema è impossibile
-E
-
-Se un tableau del simplesso primale corrisponde alla soluzione ottima:
-A. gli elementi della riga 0 sono tutti non negativi.
-B. gli elementi della colonna 0 sono tutti non negativi.
-C. gli elementi della riga 0, colonne da 1 a n, sono tutti positivi.
-D. gli elementi della riga 0, colonne da 1 a n, sono tutti non negativi.
-E. Nessuna di queste.
+In data preprocessing, which of the following IS NOT an objective of the Aggregation of attributes
+A. Reduce the variability of data
+B. Obtain a less detailed scale
+C. Reduce the number of attributes or objects
+D. Obtain a more detailed description of data
 D
 
-@Dualità ===============================================================================================
-Ad una variabile primale non negativa corrisponde
-A. nessuna di queste
-B. un vincolo duale della forma pi'a^ <= c
-C. un vincolo duale nella forma pi'a^ = c
-D. una variabile duale non negativa
-E. una variabile duale libera (non ristretta in segno)
+Which of the follwing is a strength of the clustering algorithm DBSCAN?
+A. Requires to set the number of clusters as a parameter 
+B. Ability to find cluster with concavities and separate outliers from regular data
+C. Ability to find clusters regardless of density
+D. Very fast by computation
 B
 
-Quale tra queste affermazioni è falsa rispetto ad una corrispondenza primale-duale?
-A. Ai costi corrispondono condizioni su variabili e viceversa.
-B. I vincoli sono dati dalle righe di A per il primale, dalle colonne di A per il duale.
-C. Ai costi corrispondono i termini noti e viceversa.
-D. Ad un vincolo corrisponde una condizione su una variabile e viceversa.
-E. Nessuna di queste.
+Which of the following statements regarding the discovery of association rules is true?
+A. The confidence of a rule can't be computed starting from the supports of the itemsets 
+B. The support of an itemset is anti-monotonic with respect to the composition of the itemset
+C. The support of a rule can be computed given the confidence of the rule
+D. The confidence of an itemset is anti-monotonic with respect to the composition of the itemset
+B
+
+Choose the best suited distance function for this type of data: Vector space with real values
+A. Euclidean distance
+B. Cosine distance
+C. Manhattan distance
+D. Jaccard coefficient
 A
 
-Se un problema di programmazione lineare (primale) ha soluzione ottima finita, allora:
-A. Il suo duale non è detto che abbia soluzione ottima finita.
-B. Anche il suo duale ha soluzione ottima finita e i valori delle soluzioni coincidono.
-C. Anche il duale ha soluzione ottima finita, ma non è detto che i valori delle soluzioni coincidano.
-D. Anche il duale ha soluzione ottima finita, ma i valori delle due soluzioni non coincidono.
-E. Nessuna di queste
+Choose the best suited distance function for this type of data: Vectors of terms representing documents
+A. Euclidean distance
+B. Cosine distance
+C. Manhattan distance
+D. Jaccard coefficient
 B
 
-Quale può essere una possibile coppia di problemi primale-duale?
-A. Primale ottimo finito / Duale illimitato.
-B. Primale Illimitato / Duale Illimitato.
-C. Primale impossibile / Duale impossibile.
-D. Primale ottimo finito / Duale impossibile.
-E. Nessuna di queste.
+Choose the best suited distance function for this type of data: High dimensional spaces
+A. Euclidean distance
+B. Cosine distance
+C. Manhattan distance
+D. Jaccard coefficient
 C
 
-La situazione "primale illimitato" e corrispondente "duale illimitato":
-A. dipende dal gradiente della funzione obiettivo del primale.
-B. non può mai verificarsi.
-C. può verificarsi sotto determinate condizioni.
-D. dipende dai gradienti delle due funzioni obiettivo.
-E. si verifica sempre.
-B
-
-Quando un primale è illimitato, la situazione "corrispondente duale impossibile":
-A. dipende dai gradienti delle due funzioni obiettivo
-B. non può mai verificarsi
-C. può verificarsi sotto determinate condizioni
-D. dipende dal gradiente della funzione obiettivo
-E. si verifica sempre
-E
-
-Il lemma di Farkas:
-A. Ha colto con grande anticipo l'essenza della dualità.
-B. Ha colto con grande anticipo l'essenza della programmazione intera.
-C. Offre una solida dimostrazione sull'efficienza dell'algoritmo del simplesso.
-D. Identifica la relazione tra l'ammissibilità del primale e l'impossibilità del duale.
-E. Nessuna di queste
-A
-
-Il teorema degli scarti complementari afferma:
-A. Per ogni i ad 1 a m, l'i-esima variabile duale è nulla o l'i-esimo vincolo primale è soddisfatto con uguaglianza.
-B. Per ogni j da 1 a n, il j-esimo vincolo primale deve essere soddisfatto con uguaglianza o la j-esima variabile duale deve essere nulla.
-C. per ogni i da 1 a m, l'i-esima variabile primale è nulla o l'i-esimo vincolo duale è soddisfatto con uguaglianza.
-D. Per ogni j da 1 a n, i j-esimi vincoli primali e duali devono essere soddisfatti con uguaglianza.
-E. Nessuna di queste.
-A
-
-In un problema di programmazione lineare con m vincoli ed n variabili, le condizioni di ortogonalità (complementary slackness)
-A. sono m-n.
-B. sono m+n.
-C. sono m.
-D. sono m*n.
-E. sono n.
-B
-
-Le condizioni di ortogonalità (complementary slackness) di una coppia primale-duale garantiscono:
-A. l'ammissibilità di due soluzioni, una primale e una duale
-B. l'ottimalità di due soluzioni ammissibili, una primale e una duale
-C. l'ottimalità di due soluzioni, una primale e una duale, anche se non ammissibili
-D. l'ottimalità di una soluzione primale e del suo complemento
-E. nessuna di queste
-B
-
-In un tableau del simplesso duale, gli elementi della riga 0 (colonna da 1 a n):
-A. sono tutti positivi o nulli.
-B. sono tutti positivi.
-C. sono tutti negativi.
-D. sono tutti nulli.
-E. Nessuna di queste.
-A
-
-In un tableau del simplesso duale, i costi relativi si trovano:
-A. nella riga 0, colonne corrispondenti alla base
-B. nella riga 0, colonne non corrispondenti alla base
-C. nella colonna 0, righe non corrispondenti alla base
-D. in nessuna di queste posizioni
-E. nella colonna 0, nelle righe corrispondenti alla base
-B
-
-Nell'algoritmo del simplesso duale:
-A. Scegliamo una riga i >= 1, corrispondente ad un yi0 frazionario
-B. Il pivoting deve annullare la yi0 scelta
-C. Si inizia con una base ammissibile per il primale ma non per il duale
-D. La scelta del pivot garantisce il minimo aumento del valore della soluzione
-E. Nessuna di queste
+Choose the best suited distance function for this type of data: Boolean data
+A. Euclidean distance
+B. Cosine distance
+C. Manhattan distance
+D. Jaccard coefficient
 D
 
-La scelta del pivot del simplesso duale viene determinata da:
-A. un minimo tra rapporti di valore positivo
-B. un minimo tra rapporti di valore negativo
-C. un massimo tra rapporti di valore negativo
-D. un massimo tra rapporti di valore positivo
-E. nessuna di queste
-C
-
-Cosa succede se, dopo aver individuato la riga con elemento in colonna 0 negativo, nell'algoritmo del simplesso duale ogni elemento di quella riga è positivo o nullo?
-A. Duale impossibile, Primale illimitato.
-B. Duale illimitato, Primale impossibile.
-C. Duale impossibile, Primale impossibile.
-D. Duale illimitato, Primale illimitato.
-E. Nessuna di queste.
-B
-
-Nell'algoritmo del simplesso duale, sia a'i (i>0) una riga corrispondente ad un valore negativo in colonna 0. Se tutti i coefficienti di tale riga sono positivi o nulli, ciò implica che:
-A. Il sistema Ax = b è ridondante.
-B. il problema è impossibile.
-C. la soluzione attuale è ottima.
-D. il problema ha soluzione illimitata.
-E. Nessuna di queste.
-B
-
-Relativamente al prezzo ombra:
-A. Il valore ottimo della variabile xi fornisce il prezzo ombra della risorsa associata al vincolo i.
-B. Il prezzo ombra della risorsa i identifica il valore della soluzione ottima duale.
-C. Il valore ottimo della variabile duale pi-i identifica il prezzo ombra della risorsa associata al vincolo i.
-D. Il prezzo ombra della variabile duale pi-i indica il modo per capire se una base con coefficienti diversi è ancora ottima.
-E. Nessuna di queste.
-C
-
-Relativamente al simplesso duale, quale tra le seguenti affermazioni è errata?
-A. Vogliamo che il pivoting renda positiva yi0 .
-B. Si inizia con una base ammissibile per il primale e vogliamo trovare la soluzione ottima duale.
-C. Vogliamo eliminare le inammissibilità contenute nel tableau.
-D. Il pivoting deve portare il valore 0 in y0s .
-E. Nessuna di queste.
-B
-
-@Programmazione Lineare Intera =========================================================================
-Relativamente ad un problema ILP e il suo rilassamento continuo LP
-A. z(ILP) >= z(LP)
-B. z(ILP) <= z(LP)
-C. z(ILP) < z(LP)
-D. z(ILP) > z(LP)
-E. z(ILP) = z(LP)
-A
-
-Relativamente ad un problema ILP e il suo rilassamento continuo LP
-A. z(LP) >= z(ILP)
-B. z(LP) <= z(ILP)
-C. z(LP) > z(ILP)
-D. z(LP) < z(ILP)
-E. z(LP) = z(ILP)
-B
-
-Una matrice m x n è totalmente unimodulare se:
-A. ogni sottomatrice quadrata ha determinante di valore +1 o -1.
-B. ogni sottomatrice quadrata ha determinante di valore unitario.
-C. il suo determinante ha valore unitario.
-D. il suo determinante vale 0, +1 o -1.
-E. Ogni sottomatrice quadrata ha determinante di valore 0, +1 o -1.
-E
-
-Se A è totalmente unimodulare, relativamente a problemi ILP:
-A. Il simplesso risolve problemi in tutte le forme.
-B. Il simplesso risolve solo problemi in forma standard.
-C. Il simplesso risolve problemi in forma standard e canonica, ma non in forma generale.
-D. Il simplesso risolve i problemi in forma standard e generale, ma non in forma canonica.
-E. Nessuna di queste.
-A
-
-Scelta una riga generatrice, un taglio di Gomory impone che
-A. la somma delle parti frazionarie delle variabili fuori base sia non maggiore della parte frazionaria del termine noto
-B. la somma delle parti frazionarie delle variabili base sia non maggiore della parte frazionaria del termine noto
-C. la somma delle parti frazionarie delle variabili base sia non minore della parte frazionaria del termine noto
-D. la somma delle parti frazionarie delle variabili fuori base sia non minore della parte frazionaria del termine noto
-E. nessuna delle precedenti
+Which of the following IS NOT a strength point of DBSCAN with respect to K-Means
+A. The Robustness with respect to outliers
+B. The Effectiveness, even in presence of noise
+C. The Effectiveness even if there are clusters with non-convex shape
+D. The Efficiency even in large datasets
 D
 
-Aggiungendo un taglio di Gomory al tableau finale di un LP con yi0 non intero
-A. Si elimina al più un punto intero ammissibile non ottimo
-B. Il nuovo tableau contiene una base ammissibile ma non ottima per il primale
-C. Il nuovo tableau contiene una base non ammissibile per il primale ma ammissibile per il duale
-D. Si elimina almeno una soluzione ammissibile intera
-E. Nessuna di queste
-C
-
-L'aggiunta al tableau del taglio di Gomory relativo ad una riga generatrice frazionaria produce una soluzione (un tableau) che:
-A. soddisfa il vincolo di interezza ma non è ottima.
-B. soddisfa il criterio di ottimalità ma non è ammissibile.
-C. è ammissibile ma non è intera.
-D. è ammissibile ma non soddisfa il criterio di ottimalità.
-E. Nessuna di queste.
+Which is the effect of the Curse of Dimensionality
+A. When the number of dimensions increases the results tend to be prone to overfitting 
+B. When the number of dimensions increases the euclidean distance becomes less effective to discriminate between points in the space
+C. When the number of dimensions increases the computing power necessary to compute the distances becomes too high
+D. When the number of dimensions increases the classifiers cannot be correctly tuned
 B
 
-Sia P il problema ILP e L(P) il suo rilassamento continuo. Se L(P) è illimitato, allora:
-A. P è sempre impossibile
-B. non si può dire nulla su P
-C. P è sempre illimitato
-D. P è illimitato salvo casi molto particolari
-E. nessuna di queste
-D
-
-Sia P un problema di programmazione lineare intera e L(P) il suo rilassamento continuo. Se L(P) è impossibile, allora
-A. P è impossibile salvo casi molto particolari
-B. non si può dire nulla su P
-C. P è sempre impossibile
-D. P è illimitato
-E. nessuna di queste
-C
-
-In un algoritmo branch-and-bound per un problema di massimizzazione, sia U l'upper-bound del nodo corrente. Il nodo viene ucciso se:
-A. U è minore o uguale al valore della soluzione ottima corrente
-B. U è minore o uguale al valore della soluzione ottima finale
-C. U è maggiore o uguale al valore della soluzione ottima corrente
-D. U è maggiore o uguale al valore della soluzione ottima finale
-E. nessuna di queste
-A
-
-Dopo aver inserito i vincoli del procedimento Branch-and-Bound nel tableau:
-A. Si prosegue sempre con il simplesso primale.
-B. Si prosegue sempre con il simplesso duale.
-C. Si può proseguire sia con il simplesso primale che con il simplesso duale.
-D. Si prosegue con la Fase 1 del simplesso primale.
-E. Nessuna di queste.
+Which is different from the others?
+A. Expectation Maximisation
+B. Decision Tree
+C. K-means
+D. Dbscan
 B
 
-Nel Forward Step della strategia di esplorazione Depth-First rivisitata:
-A. Si generano tutti i figli di P0 e si prosegue.
-B. Si calcola L0,si rimuove dai nodi attivi il nodo con più basso lower bound, si generano i suoi figli e ne si calcolano i lower bound, aggiornando quello migliore.
-C. Si genera un figlio dell'ultimo nodo Pk generato finchè si ottiene una soluzione immediatamente risolubile e si aggiorna eventualmente z.
-D. Si generano tutti i figli del nodo attuale, si calcolano i loro lower bound, si prosegue l'esplorazione dal figlio con minimo lower bound.
-E. Nessuna di queste
+In a Neural Network, what is the Backpropagation?
+A. The technique used to adjust the node weights according to the difference between the desired output and the output generated by the network
+B. The technique used to adjust the weights limiting the probability of overfitting
+C. The technique used to adjust the output according to the difference between the desired weights and the actual weights
+D. The technique used to adjust the connection weights according to the difference between the desired output and the output generated by the network
 D
 
-@Complessità ===========================================================================================
-Cosa è un'istanza di un problema?
-A. Un possibile algoritmo per risolverlo.
-B. Un algoritmo attualmente in esecuzione per risolverlo.
-C. L'insieme di tutti gli algoritmi che lo possono risolvere.
-D. Un particolare caso numerico.
-E. Nessuna di queste.
+Which is different from the others?
+A. Dbscan
+B. SVM
+C. Neural Network
+D. Decision Tree
+A
+
+Which of the following IS NOT a property of a Metric distance function
+A. Symmetry
+B. Positive definiteness
+C. Triangle inequality
+D. Boundedness
 D
 
-Cosa è la dimensione di un problema?
-A. Minimo tempo di esecuzione di un algoritmo per risolverlo.
-B. Lunghezza minima di un output di una sua istanza.
-C. Numero di bit necessari per codificare l'input.
-D. Numero di risorse utilizzate per risolverlo.
-E. Nessuna di queste.
-C
+Which of the statements below is FALSE?
+A. K-mean always stops to a configuration which gives the minimum distortion for the chosen value of the number of clusters 
+B. K-means is very sensitive to the initial assignment of the centers 
+C. K-means is quite efficient even for large datasets 
+D. Sometimes K-means stops to a configuration which does not give the minimum distortion for the chosen value of the number of clusters
+A
 
-Se un problema appartiene alla classe NP
-A. è risolubile solo mediante un albero decisionale di altezza esponenziale
-B. è sempre risolubile mediante un algoritmo di programmazione dinamica
-C. è sempre risolubile in tempo polinomiale
-D. è sempre risolubile mediante un albero decisionale di altezza polinomiale
-E. è sempre risolubile in tempo pseudo-polinomiale
+Which of the following characteristic of data can reduce the effectiveness of K-Means?
+A. Presence of values with high frequency
+B. Presence of outliers
+C. All the variables have the same distribution of values
+D. All the variables have the same range of values
 B
 
-Un algoritmo polinomiale per un problema NP-completo:
-A. risolverebbe in tempo polinomiale i problemi della classe NP, ma non quelli fortemente NP-completi
-B. non può esistere
-C. risolverebbe in tempo polinomiale i problemi della classe NP, ma non quelli della classe P
-D. risolverebbe ogni problema della classe NP in tempo polinomiale
-E. nessuna di queste
-D
-
-Si dice che S' domina S'' se:
-A. La somma dei pesi di S' è maggiore o uguale a quella dei pesi di S'' e la somma dei profitti di S' è minore o uguale a quella dei profitti di S''.
-B. La somma dei pesi di S' e di S'' è uguale e la somma dei profitti di S'' è maggiore di quella dei profitti di S'.
-C. La somma dei pesi di S' è minore o uguale alla somma dei pesi di S'' e la somma dei profitti di S' è maggiore o uguale a quella dei profitti di S''.
-D. La somma dei pesi di S' è minore a quella dei pesi di S'' e la somma dei profitti di S' e di S'' coincidono.
-E. Nessuna di queste.
+Which is the purpose of discretisation?
+A. Increase the number of distinct values in an attribute, in order to put in evidence possible patterns and regularities
+B. Reduce the number of distinct values in an attribute, in order to increase the efficiency of the computations
+C. Reduce the number of distinct values in an attribute, in order to put in evidence possible patterns and regularities
+D. Reduce the range of values of a numeric attribute, to make all the attributes more comparable
 C
 
-L'algoritmo Knapsack DP è:
-A. Polinomiale
-B. Esponenziale
-C. Pseudo-Esponenziale
-D. Pseudo-Polinomiale
-E. Nessuna di queste
+Given the following definitions: TP = True Positives; TN = True Negatives; FP = False Positives; FN = False Negatives. Which of the formulas below computes the Recall of a binary classifier?
+A. TP / (TP + FN)
+B. TN / (TN + FP)
+C. TP / (TP + FP)
+D. (TP + TN) / (TP + FP + TN + FN)
+A
+
+The Information Gain is used to
+A. Select the attribute which maximises, for a given training set, the ability to predict the class value
+B. Select the attribute which maximises, for a given test set, the ability to predict the class value
+C. Select the attribute which maximises, for a given training set, the ability to predict all the other attribute values
+D. Select the class with maximum probability
+A
+
+Which is the main reason for the MinMax Scaling (also known as "Rescaling") of attributes?
+A. Change the distribution of the numeric attributes, in order to obtain gaussian distributions
+B. Map all the nominal attributes to the same range in order to prevent the values with higher frequency from having prevailing influence
+C. Remove abnormal values 
+D. Map all the numeric attributes to the same range, in order to prevent attributes with higher range from having prevalent influence
 D
 
-Relativamente ad un problema fortemente NP-Completo:
-A. Non può esistere nessun algoritmo pseudo-polinomiale, a meno che P=NP.
-B. Non può esistere nessun algoritmo pseudo-polinomiale.
-C. Può esistere un algoritmo pseudo-polinomiale, a meno che P=NP.
-D. Può esistere un algoritmo pseudo-polinomiale.
-E. Nessuna di queste.
+Which of the following is a base hypothesis for a Bayesian classifier?
+A. The attributes must be statistically independent inside each class
+B. The attributes must have negative correlation
+C. The attributes must be statistically independent
+D. The attributes must have zero correlation
 A
 
-Quale tra queste affermazioni è errata?
-A. Per tutti i problemi fortemente NP-Completi esiste un algoritmo pseudo-polinomiale.
-B. La versione riconoscimento e ottimizzazione hanno stessa difficoltà in relazione alla possibilità o meno di trovare la soluzione in tempo polinomiale.
-C. Se A è trasformabile polinomialmente in B e si conosce un algoritmo polinomiale per B, allora si ha un algoritmo polinomiale anche per A.
-D. Un problema che soddisfa la definizione di Np-Completo senza stabilire la sua appartenenza a NP viene detto NP-Difficile.
-E. Nessuna di queste.
-A
+When developing a classifier, which of the following is a symptom of overfitting?
+A. The error rate in the test set is much smaller than the error rate in the training set
+B. The precision is much greater than the recall
+C. The error rate in the test set is more than 30%
+D. The error rate in the test set is much greater than the error rate in the training set
+D
 
-Relativamente alla classe di problemi NP, quale di queste affermazioni è errata?
-A. Contiene i problemi risolubili con un tempo polinomiale da una Macchina di Turing Non Deterministica.
-B. Se un problema non appartiene a NP, allora è possibile trovare un algoritmo polinomiale che lo risolva.
-C. Identifica i problemi RV tali che, se l'istanza della risposta è "sì", ciò può essere certificato in tempo polinomiale.
-D. Un problema A di NP è NP-Completo se per ogni problema B di NP, B può essere trasformato polinomialmente in A.
-E. Nessuna di queste
-B
-
-La programmazione lineare:
-A. è risolubile in tempo polinomiale, ma non dall'algoritmo del simplesso.
-B. non è risolubile in tempo polinomiale.
-C. è risolubile in tempo polinomiale dall'algoritmo del simplesso.
-D. è risolubile in tempo pseudo-polinomiale dall'algoritmo del simplesso.
-E. Nessuna di queste.
-A
-
-Relativamente ad un problema KP-01:
-A. è risolvibile solo mediante un albero decisionale.
-B. è risolvibile in tempo polinomiale.
-C. è risolvibile mediante la programmazione dinamica.
-D. non esiste algoritmo pseudo-polinomiale.
-E. Nessuna di queste.
-C
+With reference to the total sum of squared errors and separation of a clustering scheme, which of the statements below is true?
+A. They are two ways to measure the same thing
+B. They are strictly correlated, if, changing the clustering scheme, one increases, then the other does the same
+C. It is possible to optimise them (i.e. minimise SSE and maximise SSB) separately
+D. They are strictly correlated, if, changing the clustering scheme, one increases, then the other decreases
+D

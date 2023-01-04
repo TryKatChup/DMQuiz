@@ -1,5 +1,5 @@
-name: roquiz
-description: Applicazione per esercitarsi con i quiz di Ricerca Operativa M.
+name: dmquiz
+description: Quiz application for Machine Learning and Data Mining.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.

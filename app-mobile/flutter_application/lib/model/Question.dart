@@ -1,5 +1,5 @@
-import 'package:roquiz/model/Answer.dart';
-import 'package:roquiz/model/Settings.dart';
+import 'package:dmquiz/model/Answer.dart';
+import 'package:dmquiz/model/Settings.dart';
 
 class Question {
   String question = "";

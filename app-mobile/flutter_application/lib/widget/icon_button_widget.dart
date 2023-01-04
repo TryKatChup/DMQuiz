@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:roquiz/model/palette.dart';
-import 'package:roquiz/model/Themes.dart';
+import 'package:dmquiz/model/palette.dart';
+import 'package:dmquiz/model/Themes.dart';
 
 class IconButtonWidget extends StatelessWidget {
   const IconButtonWidget({

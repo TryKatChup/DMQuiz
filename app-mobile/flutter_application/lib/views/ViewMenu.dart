@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:roquiz/model/Question.dart';
-import 'package:roquiz/persistence/QuestionRepository.dart';
-import 'package:roquiz/model/Settings.dart';
-import 'package:roquiz/views/ViewQuiz.dart';
-import 'package:roquiz/views/ViewSettings.dart';
-import 'package:roquiz/views/ViewTopics.dart';
-import 'package:roquiz/views/ViewInfo.dart';
-import 'package:roquiz/model/Themes.dart';
-import 'package:roquiz/widget/icon_button_widget.dart';
+import 'package:dmquiz/model/Question.dart';
+import 'package:dmquiz/persistence/QuestionRepository.dart';
+import 'package:dmquiz/model/Settings.dart';
+import 'package:dmquiz/views/ViewQuiz.dart';
+import 'package:dmquiz/views/ViewSettings.dart';
+import 'package:dmquiz/views/ViewTopics.dart';
+import 'package:dmquiz/views/ViewInfo.dart';
+import 'package:dmquiz/model/Themes.dart';
+import 'package:dmquiz/widget/icon_button_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -22,19 +22,16 @@ class ViewMenuState extends State<ViewMenu> {
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
   final QuestionRepository qRepo = QuestionRepository();
   final Settings _settings = Settings();
-  bool _topicsPresent = false;
   final List<bool> _selectedTopics = [];
   int _quizPool = 0;
 
   late Future<int> _quizQuestionNumber;
   late Future<int> _timer;
-  late Future<bool> _darkTheme;
 
   void _initTopics() {
     setState(() {
       for (int i = 0; i < qRepo.topics.length; i++) {
         _selectedTopics.add(true);
-        _quizPool += qRepo.qNumPerTopic[i];
       }
     });
   }
@@ -49,6 +46,10 @@ class ViewMenuState extends State<ViewMenu> {
   }
 
   List<Question> _getPoolFromSelected() {
+    if (!qRepo.topicsPresent) {
+      return qRepo.questions;
+    }
+
     List<Question> res = [];
     for (int i = 0, j = 0; i < _selectedTopics.length; i++) {
       if (_selectedTopics[i]) {
@@ -76,7 +77,9 @@ class ViewMenuState extends State<ViewMenu> {
       _settings.shuffleAnswers = shuffle;
       _settings.darkTheme = dTheme;
       _settings.saveSettings();
-      resetTopics();
+      if (qRepo.topicsPresent) {
+        resetTopics();
+      }
     });
   }
 
@@ -87,12 +90,14 @@ class ViewMenuState extends State<ViewMenu> {
     _settings.loadSettings();
     qRepo.loadFile("assets/domande.txt").then(
           (value) => {
-            _initTopics(),
             setState(
               () {
-                _topicsPresent = qRepo.hasTopics();
+                _quizPool = qRepo.questions.length;
+                if (qRepo.hasTopics()) {
+                  _initTopics();
+                }
               },
-            )
+            ),
           },
         );
 
@@ -136,15 +141,15 @@ class ViewMenuState extends State<ViewMenu> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const Spacer(flex: 2),
-                              const Text("ROQuiz",
+                              const Text(Settings.APP_TITLE,
                                   style: TextStyle(
                                     fontSize: 54,
                                     fontWeight: FontWeight
                                         .bold, /*fontStyle: FontStyle.italic*/
                                   )),
-                              Text(
-                                "v${Settings.VERSION_NUMBER}${Settings.VERSION_SUFFIX}",
-                                style: const TextStyle(
+                              const Text(
+                                "v${Settings.APP_VERSION}",
+                                style: TextStyle(
                                   fontSize: 25,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -186,7 +191,7 @@ class ViewMenuState extends State<ViewMenu> {
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 30.0),
                                 child: ElevatedButton(
-                                  onPressed: _topicsPresent
+                                  onPressed: qRepo.topicsPresent
                                       ? () {
                                           Navigator.push(
                                               context,

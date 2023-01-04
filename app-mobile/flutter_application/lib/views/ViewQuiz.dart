@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:roquiz/model/Question.dart';
-import 'package:roquiz/model/Answer.dart';
-import 'package:roquiz/model/Quiz.dart';
-import 'package:roquiz/model/Settings.dart';
-import 'package:roquiz/model/Themes.dart';
-import 'package:roquiz/widget/icon_button_widget.dart';
-import 'package:roquiz/widget/question_widget.dart';
+import 'package:dmquiz/model/Question.dart';
+import 'package:dmquiz/model/Answer.dart';
+import 'package:dmquiz/model/Quiz.dart';
+import 'package:dmquiz/model/Settings.dart';
+import 'package:dmquiz/model/Themes.dart';
+import 'package:dmquiz/widget/icon_button_widget.dart';
+import 'package:dmquiz/widget/question_widget.dart';
 
 class ViewQuiz extends StatefulWidget {
   const ViewQuiz({Key? key, required this.questions, required this.settings})
@@ -101,10 +101,9 @@ class _ViewQuizState extends State<ViewQuiz> {
       _qIndex = 0;
       _correctAnswers = 0;
       _isOver = false;
-      _currentQuestion = quiz.questions[_qIndex].question;
-      _currentAnswers = quiz.questions[_qIndex].answers;
 
       _timerCounter = widget.settings.timer * 60;
+      _loadQuestion();
     });
     _startTimer();
   }

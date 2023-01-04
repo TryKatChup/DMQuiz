@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:roquiz/model/Answer.dart';
-import 'package:roquiz/model/Question.dart';
-import 'package:roquiz/persistence/QuestionRepository.dart';
-import 'package:roquiz/widget/question_widget.dart';
+import 'package:dmquiz/model/Answer.dart';
+import 'package:dmquiz/model/Question.dart';
+import 'package:dmquiz/persistence/QuestionRepository.dart';
+import 'package:dmquiz/widget/question_widget.dart';
 
 class ViewQuestions extends StatefulWidget {
   const ViewQuestions({Key? key, required this.qRepo, required this.iTopic});
