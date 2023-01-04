@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:dmquiz/model/Answer.dart';
 import 'package:dmquiz/model/Question.dart';
 import 'package:dmquiz/persistence/QuestionRepository.dart';
 import 'package:dmquiz/widget/question_widget.dart';
@@ -33,7 +32,7 @@ class ViewQuestionsState extends State<ViewQuestions> {
 
       // get question list
       for (int i = offset; i < offset + qNum; i++) {
-        Question q = widget.qRepo.questions[i];
+        Question q = widget.qRepo.getQuestions()[i];
         questions.add(q);
       }
     });
@@ -48,7 +47,7 @@ class ViewQuestionsState extends State<ViewQuestions> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            widget.qRepo.topics[widget.iTopic],
+            widget.qRepo.getTopics()[widget.iTopic],
             maxLines: 2,
           ),
           centerTitle: true,

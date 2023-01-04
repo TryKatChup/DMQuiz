@@ -5,19 +5,25 @@ class Question {
   String question = "";
   List<String> answers = [];
   Answer correctAnswer = Answer.NONE;
+  int answersNumber = Settings.DEFAULT_ANSWER_NUMBER;
 
+  Question.withAnswersNumber(this.question, this.answersNumber);
   Question(this.question);
 
   void addAnswer(String answer) {
-    if (answers.length == Settings.DEFAULT_ANSWER_NUMBER) {
+    /*if (answers.length == Settings.DEFAULT_ANSWER_NUMBER) {
       throw Exception("Answer number excedeed.");
-    }
+    }*/
     int index = answers.length;
     Answer a = Answer.values[index];
     answers.add(answer);
   }
 
   void setCorrectAnswerFromInt(int correctAnswer) {
+    if (answers.length < correctAnswer) {
+      throw Exception(
+          "Correct answer must be between A and ${String.fromCharCode(65 + answers.length)}.");
+    }
     this.correctAnswer = Answer.values[correctAnswer];
   }
 

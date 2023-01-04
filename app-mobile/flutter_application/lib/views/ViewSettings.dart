@@ -28,16 +28,11 @@ class ViewSettingsState extends State<ViewSettings> {
   bool _shuffleAnswers = Settings.DEFAULT_SHUFFLE_ANSWERS;
   bool _darkTheme = Settings.DEFAULT_DARK_THEME; // previous value
 
-  bool _isPressedQI = false;
-  bool _isPressedQD = false;
-  bool _isPressedTI = false;
-  bool _isPressedTD = false;
-
   void _increaseQuestionNumber(int v) {
     setState(() {
-      _questionNumber + v <= widget.qRepo.questions.length
+      _questionNumber + v <= widget.qRepo.getQuestions().length
           ? _questionNumber += v
-          : _questionNumber = widget.qRepo.questions.length;
+          : _questionNumber = widget.qRepo.getQuestions().length;
     });
   }
 
@@ -51,9 +46,9 @@ class ViewSettingsState extends State<ViewSettings> {
 
   void _increaseTimer(int v) {
     setState(() {
-      _timer + v <= widget.qRepo.questions.length * 2
+      _timer + v <= widget.qRepo.getQuestions().length * 2
           ? _timer += v
-          : _timer = widget.qRepo.questions.length * 2;
+          : _timer = widget.qRepo.getQuestions().length * 2;
     });
   }
 

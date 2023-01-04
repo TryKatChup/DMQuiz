@@ -203,7 +203,7 @@ class _ViewQuizState extends State<ViewQuiz> {
                   const SizedBox(height: 10),
                   _isOver
                       ? Text(
-                          "Risposte corrette: $_correctAnswers/${widget.settings.questionNumber}, Risposte errate: ${widget.settings.questionNumber - _correctAnswers}.\nRange di voto finale, in base allo scritto: [${(11.33 + _correctAnswers ~/ 3).toInt().toString()}, ${22 + _correctAnswers * 2 ~/ 3}]")
+                          "Risposte corrette: $_correctAnswers/${widget.settings.questionNumber}, Risposte errate: ${widget.settings.questionNumber - _correctAnswers}.")
                       : const Text(""),
                 ],
               ),

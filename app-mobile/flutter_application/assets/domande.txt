@@ -507,3 +507,112 @@ B. They are strictly correlated, if, changing the clustering scheme, one increas
 C. It is possible to optimise them (i.e. minimise SSE and maximise SSB) separately
 D. They are strictly correlated, if, changing the clustering scheme, one increases, then the other decreases
 D
+
+@Big Data ==============================================================================================
+Talking about ETL, which of the following activities is related to the Cleansing step?
+A. Elimination of duplicates
+B. None of the others
+C. Snapshot of the operational data
+D. Association of a timestamp to the operational data
+A
+
+Talking about ETL, which of the following activities is related to the Cleansing step?
+A. None of the others
+B. Usage of dictionaries to solve inconsistencies
+C. Snapshot of the operational data
+D. Association of a timestamp to the operational data
+B
+
+Talking about ETL, which of the following activities is related to the Transformation step?
+A. Calculation of derived data
+B. None of the others
+C. Usage of dictionaries to solve inconsistencies
+D. Snapshot of the operational data
+A
+
+Talking about ETL, which of the following activities is related to the Transformation step?
+A. None of the others
+B. Denormalisation
+C. Usage of dictionaries to solve inconsistencies
+D. Snapshot of the operational data
+B
+
+Talking about ETL, which of the following activities is related to the Extraction step?
+A. Usage of dictionaries to solve inconsistencies
+B. Elimination of duplicates
+C. Snapshot of the operational data
+D. None of the others
+C
+
+Talking about ETL, which of the following activities is related to the Extraction step?
+A. Usage of dictionaries to solve inconsistencies
+B. Elimination of duplicates
+C. None of the others
+D. Association of a timestamp to the operational data
+D
+
+Which of the definition below describes the OLAP operation "Pivot"?
+A. Causes an increase in data aggregation and removes a detail level in a hierarchy
+B. Reduces data aggregation and adds a detail level to a hierarchy
+C. Changes the layout, in order to analyse a group of data from a different viewpoint
+D. Creates a link between concepts in interrelated cubes, to compare them
+E. Reduces the number of cube dimensions after setting one of the dimensions to a specific value
+C
+
+Which of the definition below describes the OLAP operation "Roll-Up"?
+A. Reduces data aggregation and adds a detail level to a hierarchy
+B. Changes the layout, in order to analyse a group of data from a different viewpoint
+C. Reduces the number of cube dimensions after setting one of the dimensions to a specific value
+D. Creates a link between concepts in interrelated cubes, to compare them
+E. Causes an increase in data aggregation and removes a detail level in a hierarchy
+E
+
+Talking about the general idea of database, what is the meaning of "Schema on read"?
+A. Write the raw data in the database, then at reading time shape then according to the reader's needs
+B. Create a schema for data after reading them from the database
+C. Read the schema of the data before each data read
+D. Change the schema of the data before each read
+B
+
+Talking about the general idea of database, what is the meaning of "Schema on write"?
+A. Create a schema for data after writing into the database
+B. Create a schema for data while writing into the database
+C. Change the schema of the data after each write
+D. Create a schema for data before writing into the database
+D
+
+Talking about the general idea of database, what is the purpose of "Schema on write" strategy?
+A. Optimization for specific types of queries
+B. Clean design of the data structure
+C. Avoid preprocessing of data before writing
+D. Flexibility and efficiency for any kind of query
+B
+
+In which part of the CRISP methodology we perform the test design activity?
+A. Data Understanding
+B. Evaluation
+C. Business Understanding
+D. Modelling
+D
+
+Which of the definition below describes the OLAP operation "Drill-Down"?
+A. Reduces data aggregation and adds a detail level to a hierarchy
+B. Creates a link between concepts in interrelated cubes, to compare them
+C. Changes the layout, in order to analyse a group of data from a different viewpoint
+D. Causes an increase in data aggregation and removes a detail level in a hierarchy
+E. Reduces the number of cube dimensions after setting one of the dimensions to a specific value
+A
+
+Which of the activities below is part of "Business Understanding" in the CRISP methodology?
+A. Which data are available?
+B. Which machine learning functions are necessary for my problem?
+C. Which data must be collected with a specific campaign?
+D. Which are the resources available (manpower, hardware, software, ...)
+D
+
+Which operations are in the correct sequence?
+A. Extraction - Cleansing - Transformation - Loading
+B. Extraction -  Transformation - Cleansing - Loading
+C. Extraction - Cleansing - Loading - Transformation
+D. Transformation - Extraction - Cleansing - Loading
+A

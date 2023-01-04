@@ -60,8 +60,9 @@ class ViewTopicsState extends State<ViewTopics> {
         _enabledTopics[i] = true;
 
         if (widget.selectedTopics[i]) {
-          _enabledTopics[i] = _currentQuizPool - widget.qRepo.qNumPerTopic[i] >=
-              widget.settings.questionNumber;
+          _enabledTopics[i] =
+              _currentQuizPool - widget.qRepo.getQuestionNumPerTopic()[i] >=
+                  widget.settings.questionNumber;
         }
       }
     });
@@ -70,7 +71,9 @@ class ViewTopicsState extends State<ViewTopics> {
   int _getPoolSize() {
     int res = 0;
     for (int i = 0; i < widget.selectedTopics.length; i++) {
-      res += widget.selectedTopics[i] ? widget.qRepo.qNumPerTopic[i] : 0;
+      res += widget.selectedTopics[i]
+          ? widget.qRepo.getQuestionNumPerTopic()[i]
+          : 0;
     }
     return res;
   }
@@ -79,7 +82,9 @@ class ViewTopicsState extends State<ViewTopics> {
     setState(() {
       int res = 0;
       for (int i = 0; i < _enabledTopics.length; i++) {
-        res += widget.selectedTopics[i] ? widget.qRepo.qNumPerTopic[i] : 0;
+        res += widget.selectedTopics[i]
+            ? widget.qRepo.getQuestionNumPerTopic()[i]
+            : 0;
       }
       _currentQuizPool = res;
     });
@@ -126,7 +131,7 @@ class ViewTopicsState extends State<ViewTopics> {
             children: [
               TopicsInfoWidget(
                 text: "Domande Totali: ",
-                value: widget.qRepo.questions.length,
+                value: widget.qRepo.getQuestions().length,
                 color: Colors.indigo.withOpacity(0.35),
               ),
               TopicsInfoWidget(
@@ -165,7 +170,7 @@ class ViewTopicsState extends State<ViewTopics> {
                                 builder: (context) => ViewQuestions(
                                     qRepo: widget.qRepo, iTopic: index)));
                       },
-                      text: " ${widget.qRepo.topics[index]}",
+                      text: " ${widget.qRepo.getTopics()[index]}",
                       questionNum: widget.qRepo.getQuestionNumPerTopic()[index],
                       textSize: 20.0,
                       lightTextColor: Colors.black,

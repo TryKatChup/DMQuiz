@@ -1,11 +1,11 @@
 {
-    "name": "flutter_application",
-    "short_name": "flutter_application",
+    "name": "DMQuiz",
+    "short_name": "DMQuiz",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Data Mining M app to make practice for the exam",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

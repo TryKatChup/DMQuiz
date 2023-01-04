@@ -24,13 +24,15 @@ class ViewMenuState extends State<ViewMenu> {
   final Settings _settings = Settings();
   final List<bool> _selectedTopics = [];
   int _quizPool = 0;
+  bool _repoError = false;
+  String _errorMessage = "";
 
   late Future<int> _quizQuestionNumber;
   late Future<int> _timer;
 
   void _initTopics() {
     setState(() {
-      for (int i = 0; i < qRepo.topics.length; i++) {
+      for (int i = 0; i < qRepo.getTopics().length; i++) {
         _selectedTopics.add(true);
       }
     });
@@ -41,13 +43,13 @@ class ViewMenuState extends State<ViewMenu> {
       for (int i = 0; i < _selectedTopics.length; i++) {
         _selectedTopics[i] = true;
       }
-      _quizPool = qRepo.questions.length;
+      _quizPool = qRepo.getQuestions().length;
     });
   }
 
   List<Question> _getPoolFromSelected() {
-    if (!qRepo.topicsPresent) {
-      return qRepo.questions;
+    if (!qRepo.hasTopics()) {
+      return qRepo.getQuestions();
     }
 
     List<Question> res = [];
@@ -77,35 +79,9 @@ class ViewMenuState extends State<ViewMenu> {
       _settings.shuffleAnswers = shuffle;
       _settings.darkTheme = dTheme;
       _settings.saveSettings();
-      if (qRepo.topicsPresent) {
+      if (qRepo.hasTopics()) {
         resetTopics();
       }
-    });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-
-    _settings.loadSettings();
-    qRepo.loadFile("assets/domande.txt").then(
-          (value) => {
-            setState(
-              () {
-                _quizPool = qRepo.questions.length;
-                if (qRepo.hasTopics()) {
-                  _initTopics();
-                }
-              },
-            ),
-          },
-        );
-
-    _quizQuestionNumber = _prefs.then((SharedPreferences prefs) {
-      return prefs.getInt("questionNumber") ?? -1;
-    });
-    _timer = _prefs.then((SharedPreferences prefs) {
-      return prefs.getInt("timer") ?? -1;
     });
   }
 
@@ -118,6 +94,40 @@ class ViewMenuState extends State<ViewMenu> {
     )) {
       throw 'Could not launch $url';
     }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    _settings.loadSettings();
+    qRepo
+        .loadFile("assets/domande.txt")
+        .then(
+          (value) => {
+            setState(
+              () {
+                _quizPool = qRepo.getQuestions().length;
+                if (qRepo.hasTopics()) {
+                  _initTopics();
+                }
+              },
+            ),
+          },
+        )
+        .onError((error, stackTrace) => {
+              setState(() {
+                _repoError = true;
+                _errorMessage = "$error\n$stackTrace";
+              })
+            });
+
+    _quizQuestionNumber = _prefs.then((SharedPreferences prefs) {
+      return prefs.getInt("questionNumber") ?? -1;
+    });
+    _timer = _prefs.then((SharedPreferences prefs) {
+      return prefs.getInt("timer") ?? -1;
+    });
   }
 
   @override
@@ -160,19 +170,20 @@ class ViewMenuState extends State<ViewMenu> {
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 30.0),
                                 child: ElevatedButton(
-                                  onPressed: qRepo.questions.isEmpty
-                                      ? null
-                                      : () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      ViewQuiz(
-                                                        questions:
-                                                            _getPoolFromSelected(),
-                                                        settings: _settings,
-                                                      )));
-                                        },
+                                  onPressed:
+                                      qRepo.getQuestions().isEmpty || _repoError
+                                          ? null
+                                          : () {
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          ViewQuiz(
+                                                            questions:
+                                                                _getPoolFromSelected(),
+                                                            settings: _settings,
+                                                          )));
+                                            },
                                   child: Container(
                                     alignment: Alignment.center,
                                     height: 60,
@@ -191,7 +202,7 @@ class ViewMenuState extends State<ViewMenu> {
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 30.0),
                                 child: ElevatedButton(
-                                  onPressed: qRepo.topicsPresent
+                                  onPressed: qRepo.hasTopics() && !_repoError
                                       ? () {
                                           Navigator.push(
                                               context,
@@ -236,27 +247,60 @@ class ViewMenuState extends State<ViewMenu> {
                                     ),
                                     Text("Tempo: ${_settings.timer} min"),
                                   ]),
-                              const SizedBox(height: 50),
-                              InkWell(
-                                onTap: () {
-                                  _launchInBrowser(
-                                      "https://github.com/mikyll/ROQuiz");
-                                },
-                                child: Container(
-                                  color: Colors.indigo.withOpacity(0.35),
-                                  height: 120,
-                                  alignment: Alignment.center,
-                                  child: const Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Text(
-                                        "Se l'app ti è piaciuta, considera di lasciare una stellina alla repository GitHub!\n\nBasta un click qui!",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                        )),
-                                  ),
-                                ),
-                              ),
+                              _repoError
+                                  ? const Padding(
+                                      padding: EdgeInsets.all(12.0),
+                                      child: Text("Errore nel file domande",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize: 18, color: Colors.red)),
+                                    )
+                                  : const SizedBox(height: 50),
+                              _repoError
+                                  ? Container(
+                                      color: Colors.indigo.withOpacity(0.35),
+                                      height: 200,
+                                      alignment: Alignment.center,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: ListView.builder(
+                                            padding: const EdgeInsets.only(
+                                                bottom: 24),
+                                            itemCount: _errorMessage
+                                                .split("\n")
+                                                .length,
+                                            itemBuilder: (context, index) {
+                                              final license = _errorMessage
+                                                  .split("\n")[index];
+
+                                              return Text(_errorMessage,
+                                                  textAlign: TextAlign.center,
+                                                  style: const TextStyle(
+                                                    fontSize: 12,
+                                                  ));
+                                            }),
+                                      ),
+                                    )
+                                  : InkWell(
+                                      onTap: () {
+                                        _launchInBrowser(
+                                            "https://github.com/mikyll/ROQuiz");
+                                      },
+                                      child: Container(
+                                        color: Colors.indigo.withOpacity(0.35),
+                                        height: 120,
+                                        alignment: Alignment.center,
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: Text(
+                                              "Se l'app ti è piaciuta, considera di lasciare una stellina alla repository GitHub!\n\nBasta un click qui!",
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontSize: 18,
+                                              )),
+                                        ),
+                                      ),
+                                    ),
                               const Spacer(flex: 5),
                             ],
                           ));

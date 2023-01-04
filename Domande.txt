@@ -507,12 +507,49 @@ B. They are strictly correlated, if, changing the clustering scheme, one increas
 C. It is possible to optimise them (i.e. minimise SSE and maximise SSB) separately
 D. They are strictly correlated, if, changing the clustering scheme, one increases, then the other decreases
 D
-@Big Data ======================================================================================
+
+@Big Data ==============================================================================================
 Talking about ETL, which of the following activities is related to the Cleansing step?
 A. Elimination of duplicates
+B. None of the others
+C. Snapshot of the operational data
+D. Association of a timestamp to the operational data
+A
+
+Talking about ETL, which of the following activities is related to the Cleansing step?
+A. None of the others
 B. Usage of dictionaries to solve inconsistencies
 C. Snapshot of the operational data
 D. Association of a timestamp to the operational data
+B
+
+Talking about ETL, which of the following activities is related to the Transformation step?
+A. Calculation of derived data
+B. None of the others
+C. Usage of dictionaries to solve inconsistencies
+D. Snapshot of the operational data
+A
+
+Talking about ETL, which of the following activities is related to the Transformation step?
+A. None of the others
+B. Denormalisation
+C. Usage of dictionaries to solve inconsistencies
+D. Snapshot of the operational data
+B
+
+Talking about ETL, which of the following activities is related to the Extraction step?
+A. Usage of dictionaries to solve inconsistencies
+B. Elimination of duplicates
+C. Snapshot of the operational data
+D. None of the others
+C
+
+Talking about ETL, which of the following activities is related to the Extraction step?
+A. Usage of dictionaries to solve inconsistencies
+B. Elimination of duplicates
+C. None of the others
+D. Association of a timestamp to the operational data
+D
 
 Which of the definition below describes the OLAP operation "Pivot"?
 A. Causes an increase in data aggregation and removes a detail level in a hierarchy
@@ -556,6 +593,7 @@ A. Data Understanding
 B. Evaluation
 C. Business Understanding
 D. Modelling
+D
 
 Which of the definition below describes the OLAP operation "Drill-Down"?
 A. Reduces data aggregation and adds a detail level to a hierarchy
