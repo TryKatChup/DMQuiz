@@ -2,18 +2,16 @@
 
 [![Downloads][downloads-shield]][downloads-url]
 [![Domande][domande-shield]][domande-url]
-[![Validazione Domande][validazione-shield]][validazione-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 [![Issues][issues-shield]][issues-url]
 <br />
-[![java][java-shield]][java-url]
 [![dart][dart-shield]][dart-url]
 [![flutter][flutter-shield]][flutter-url]
 
-<h1> ROQuiz</h1>
-<h3> Applicazione multipiattaforma per esercitarsi con i quiz del corso Ricerca Operativa M.</h3>
+<h1>DMQuiz</h1>
+<h3>Applicazione multipiattaforma per esercitarsi con i quiz del corso <a href="https://www.unibo.it/it/didattica/insegnamenti/insegnamento/2022/468022">Data Mining M</a>.</h3>
 <hr class="rounded">
 </div>
 
@@ -23,18 +21,18 @@
 
 ### Funzionalità
 - L'app **simula un quiz d'esame**, pescando in modo casuale delle domande a risposta multipla a cui l'utente deve rispondere entro il tempo limite definito da un timer.
-- Pool di <span id="domande">87</span> domande differenti, divise per argomento (elenco aggiornato al _25 gennaio 2022_).
+- Pool di <span id="domande">69+</span> domande differenti, divise per argomento.
 - Possibilità di scelta di argomenti specifici per le domande da includere nel quiz.
 - Possibilità di personalizzare le impostazioni dell'app in modo persistente:
-  - Scelta di un numero specifico di domande (default: 16, selezionate casualmente).
-  - Modifica del tempo a disposizione per il quiz (default: 18 minuti).
+  - Scelta di un numero specifico di domande (default: 10, selezionate casualmente).
+  - Modifica del tempo a disposizione per il quiz (default: 10 minuti).
   - Controllo all'avvio dell'app se nella repository sono presenti nuove domande.
   - Scelta del tema (chiaro/scuro)
 - Possibilità di inserimento di domande personalizzate (modificando il file Domande.txt e rispettando le regole di [formattazione](#formattazione-domande)).
 
 ### Demo
 #### Desktop
-<table style="border: none">
+<!--<table style="border: none">
   <tr align="center">
     <td><img src="./gfx/[GIF] DesktopEndQuiz.gif" alt="EndQuizGIF"/></td>
     <td><img src="./gfx/[GIF] DesktopTimeout.gif" alt="TimeoutGIF"/></td>
@@ -43,10 +41,10 @@
     <td>Terminazione quiz</td>
     <td>Tempo scaduto</td>
   </tr>
-</table>
+</table>-->
 
 #### Mobile
-<table style="border: none">
+<!--<table style="border: none">
   <tr align="center">
     <td><img width=50% src="./gfx/[GIF] MobileDemo.gif" alt="DemoMobileGIF"/></td>
     <td><img width=50% src="./gfx/[GIF] MobileQuestionList.gif" alt="QuestionListGIF"/></td>
@@ -57,15 +55,15 @@
     <td>Lista Domande</td>
     <td>Impostazioni</td>
   </tr>
-</table>
+</table>-->
 
 ### Download
 #### Versione Desktop
-1. Scaricare l'[ultima release](https://github.com/mikyll/ROQuiz/releases/latest) ([Windows](https://github.com/mikyll/ROQuiz/releases/download/v1.5/ROQuizDeployWindows_x64.zip), [Linux](https://github.com/mikyll/ROQuiz/releases/download/v1.5/ROQuizDeployLinux.tar.gz) o [MacOS](https://github.com/mikyll/ROQuiz/releases/download/v1.5/ROQuizDeployMac_ARMx64.zip)) ed estrarre il contenuto.
-2. Eseguire Launcher con doppioclick.
+1. Scaricare l'[ultima release](https://github.com/TryKatChup/ML-DM-Quiz/releases/latest) ([Windows](), [Linux]() o [MacOS]()) ed estrarre il contenuto.
+2. Eseguire Launcher con doppio click.
 
 #### Versione Mobile
-1. Scaricare l'[apk](https://github.com/mikyll/ROQuiz/releases/download/v1.4/roquiz-mobile.apk).
+1. Scaricare l'[apk]().
 2. Selezionare ```INSTALLA``` e ```INSTALLA COMUNQUE```.
 
 ### Formattazione domande
@@ -73,8 +71,8 @@ Le domande sono caricate da un file "<a href="./Domande.txt">Domande.txt</a>" ch
 * (opzionale) Argomenti:
   - la riga di un argomento inizia col carattere speciale '@', seguito dal titolo dell'argomento (es: Complessità). Ogni riga di argomento è seguita dalle domande relative a quell'argomento, fino all'argomento successivo. Alla fine della riga dell'argomento possono essere usati caratteri non alfabetici (ad esempio '=') per separare visivamente le domande di argomenti differenti (tali caratteri verranno ignorati).
 * Domande: 
-  - una riga per la domanda;
-  - 5 righe per le risposte (la riga inizia con una lettera maiuscola, seguita da un punto e dalla risposta);
+  - una o più righe per la domanda (in caso di domanda multilinea è necessario aggiungere il carattere di newline '\n' al termine di tutte le righe della domanda, tranne l'ultima);
+  - 4 righe per le risposte (la riga inizia con una lettera maiuscola, seguita da un punto e dalla risposta);
   - una riga per la risposta corretta (una lettera da A a E);
   - una riga vuota se non è l'ultima domanda (questa riga separa la domanda da quella successiva, o dall'argomento successivo).
 
@@ -82,35 +80,27 @@ NB: non è importante la lettera con cui iniziano le risposte, basta che siano i
 
 esempio (tre domande di due argomenti diversi nel file Domande.txt):
 <pre>
-@Programmazione Matematica =============================================================================
-Dato un insieme F, un intorno è
-A. L'insieme di tutti i sottoinsiemi di F
-B. L'insieme dei punti di F a distanza minore di epsilon da un punto x di F
-C. Una funzione N: F -> 2^F
-D. Una combinazione convessa di due punti x e y di F
-E. Nessuna di queste
-C
-
-@Dualità ===============================================================================================
-Se un problema di programmazione lineare (primale) ha soluzione ottima finita, allora:
-A. Il suo duale non è detto che abbia soluzione ottima finita.
-B. Anche il suo duale ha soluzione ottima finita e i valori delle soluzioni coincidono.
-C. Anche il duale ha soluzione ottima finita, ma non è detto che i valori delle soluzioni coincidano.
-D. Anche il duale ha soluzione ottima finita, ma i valori delle due soluzioni non coincidono.
-E. Nessuna di queste
-B
-
-Quale tra queste affermazioni è falsa rispetto ad una corrispondenza primale-duale?
-A. Ai costi corrispondono condizioni su variabili e viceversa.
-B. I vincoli sono dati dalle righe di A per il primale, dalle colonne di A per il duale.
-C. Ai costi corrispondono i termini noti e viceversa.
-D. Ad un vincolo corrisponde una condizione su una variabile e viceversa.
-E. Nessuna di queste.
+@Machine Learning ======================================================================================
+Which of the following types of data allows the use of the euclidean distance?
+A. Points in a vector space
+B. Ordered data
+C. Transactional data
+D. Document representations
 A
-</pre>
 
-### Spiegazione Domande
-[Questo documento](./Domande%20RO%20con%20spiegazione.pdf), a cura di [Lorenzo di Palma](https://github.com/lollofred) e [Filippo Veronesi](https://github.com/filippoveronesi), contiene la spiegazione alla maggior parte delle domande presenti nel quiz.
+Given the two binary vectors below, which is their similarity according to the Jaccard Coefficient?\n
+a b c d e f g h i j\n
+1 0 0 0 1 0 1 1 0 1\n
+1 0 1 1 1 0 1 0 1 0
+A. 0.1
+B. 0.2
+C. 0.5
+D. 0.375
+D
+
+@Data Mining ===========================================================================================
+[...]
+</pre>
 
 ### Contribuire
 Aggiunta domande o feature al progetto:
@@ -118,8 +108,8 @@ Aggiunta domande o feature al progetto:
 2. Clonare la repository in locale.
 3. (Opzionale) Creare un nuovo branch.
 4. Aggiungere le modifiche:
-  * Per aggiungere nuove domande: modificare il file 'Domande.txt', inserendo le nuove domande sotto gli argomenti relativi. NB: in caso non si sappia sotto quale argomento inserire una somanda, scriverlo successivamente in un commento nella pull request.<br/>
-  * Per aggiungere delle feature, basta implementarle e integrarle col resto dell'applicazione (in caso di dubbi o domande sul funzionamento di alcune parti di codice, basta aprire un issue e cercherò di rispondere il prima possibile).
+  * Per aggiungere nuove domande: modificare il file 'Domande.txt', inserendo le nuove domande sotto gli argomenti relativi. NB: in caso non si sappia sotto quale argomento inserire una domanda, scriverlo successivamente in un commento nella pull request.<br/>
+  * Per aggiungere delle feature, basta implementarle e integrarle col resto dell'applicazione.
 5. Fare commit e push.
 6. Creare una **pull request** aggiungendo informazioni se necessario.
 7. Ammirare il proprio nome inserito in questa meravigliosa lista che viene aggiornata automaticamente.
@@ -133,20 +123,6 @@ Proposta feature:
 <table>
 <tr>
     <td align="center">
-        <a href="https://github.com/mikyll">
-            <img src="https://avatars.githubusercontent.com/u/56556806?v=4" width="100;" alt="mikyll"/>
-            <br />
-            <sub><b>mikyll</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/filippoveronesi">
-            <img src="https://avatars.githubusercontent.com/u/61983672?v=4" width="100;" alt="filippoveronesi"/>
-            <br />
-            <sub><b>filippoveronesi</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/TryKatChup">
             <img src="https://avatars.githubusercontent.com/u/39459803?v=4" width="100;" alt="TryKatChup"/>
             <br />
@@ -154,17 +130,17 @@ Proposta feature:
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Federicoand98">
-            <img src="https://avatars.githubusercontent.com/u/40764404?v=4" width="100;" alt="Federicoand98"/>
+        <a href="https://github.com/mikyll">
+            <img src="https://avatars.githubusercontent.com/u/56556806?v=4" width="100;" alt="mikyll"/>
             <br />
-            <sub><b>Federicoand98</b></sub>
+            <sub><b>mikyll</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/lollofred">
-            <img src="https://avatars.githubusercontent.com/u/73138694?v=4" width="100;" alt="lollofred"/>
+        <a href="https://github.com/Noesh">
+            <img src="https://avatars.githubusercontent.com/u/56556129?v=4" width="100;" alt="Noesh"/>
             <br />
-            <sub><b>lollofred</b></sub>
+            <sub><b>Noesh</b></sub>
         </a>
     </td></tr>
 </table>
@@ -245,12 +221,6 @@ Proposta feature:
 </details>
 
 ### Built With
-#### Desktop
-Per l'implementazione dell'app desktop ho utilizzato Java 11 e JavaFX 11, come IDE Eclipse (versione 2020-03 (4.15.0)), e SceneBuilder per la creazione della grafica (file FXML). Vedere i passi seguiti per il [setup del progetto](./Project%20Setup.md).
-
-versione Java: JavaSE-11 (jdk-11.0.11)<br/>
-versione JavaFX: JavaFX 11 (javafx-sdk-11.0.2)
-
 #### Mobile
 Per l'implementazione dell'app mobile ho utilizzato Flutter, come IDE Visual Studio Code (versione 1.64.2).
 
@@ -286,30 +256,28 @@ L'obiettivo dell'applicazione è esercitarsi coi quiz dopo aver studiato la teor
 
 </div>
 
-[downloads-shield]: https://img.shields.io/github/downloads/mikyll/ROQuiz/total
-[downloads-url]: https://github.com/mikyll/ROQuiz/releases/latest
-[contributors-shield]: https://img.shields.io/github/contributors/mikyll/ROQuiz
-[contributors-url]: https://github.com/mikyll/ROQuiz/graphs/contributors
+[downloads-shield]: https://img.shields.io/github/downloads/TryKatChup/ML-DM-Quiz/total
+[downloads-url]: https://github.com/TryKatChup/ML-DM-Quiz/releases/latest
+[contributors-shield]: https://img.shields.io/github/contributors/TryKatChup/ML-DM-Quiz
+[contributors-url]: https://github.com/TryKatChup/ML-DM-Quiz/graphs/contributors
 [domande-shield]: https://img.shields.io/static/v1?label=domande&message=87&color=green
-[domande-url]: https://github.com/mikyll/ROQuiz/blob/main/Domande.txt
-[validazione-shield]: https://github.com/mikyll/ROQuiz/actions/workflows/check_file_domande.yml/badge.svg
-[validazione-url]: https://github.com/mikyll/ROQuiz/actions/workflows/check_file_domande.yml
-[forks-shield]: https://img.shields.io/github/forks/mikyll/ROQuiz
-[forks-url]: https://github.com/mikyll/ROQuiz/network/members
-[repo-size-shield]: https://img.shields.io/github/repo-size/mikyll/ROQuiz
-[repo-size-url]: https://img.shields.io/github/repo-size/mikyll/ROQuiz
-[total-lines-shield]: https://img.shields.io/tokei/lines/github/mikyll/ROQuiz
-[total-lines-url]: https://img.shields.io/tokei/lines/github/mikyll/ROQuiz
-[pull-request-shield]: https://img.shields.io/github/issues-pr/mikyll/ROQuiz
-[pull-request-url]: https://img.shields.io/github/issues-pr/mikyll/ROQuiz
-[stars-shield]: https://img.shields.io/github/stars/mikyll/ROQuiz
-[stars-url]: https://github.com/mikyll/ROQuiz/stargazers
-[issues-shield]: https://img.shields.io/github/issues/mikyll/ROQuiz
-[issues-url]: https://github.com/mikyll/ROQuiz/issues
+[domande-url]: https://github.com/TryKatChup/ML-DM-Quiz/blob/main/Domande.txt
+[validazione-shield]: https://github.com/TryKatChup/ML-DM-Quiz/actions/workflows/check_file_domande.yml/badge.svg
+[validazione-url]: https://github.com/TryKatChup/ML-DM-Quiz/actions/workflows/check_file_domande.yml
+[forks-shield]: https://img.shields.io/github/forks/TryKatChup/ML-DM-Quiz
+[forks-url]: https://github.com/TryKatChup/ML-DM-Quiz/network/members
+[repo-size-shield]: https://img.shields.io/github/repo-size/TryKatChup/ML-DM-Quiz
+[repo-size-url]: https://img.shields.io/github/repo-size/TryKatChup/ML-DM-Quiz
+[total-lines-shield]: https://img.shields.io/tokei/lines/github/TryKatChup/ML-DM-Quiz
+[total-lines-url]: https://img.shields.io/tokei/lines/github/TryKatChup/ML-DM-Quiz
+[pull-request-shield]: https://img.shields.io/github/issues-pr/TryKatChup/ML-DM-Quiz
+[pull-request-url]: https://img.shields.io/github/issues-pr/TryKatChup/ML-DM-Quiz
+[stars-shield]: https://img.shields.io/github/stars/TryKatChup/ML-DM-Quiz
+[stars-url]: https://github.com/TryKatChup/ML-DM-Quiz/stargazers
+[issues-shield]: https://img.shields.io/github/issues/TryKatChup/ML-DM-Quiz
+[issues-url]: https://github.com/TryKatChup/ML-DM-Quiz/issues
 [license-shield]: https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg
 [license-url]: https://creativecommons.org/licenses/by-nc-sa/4.0/
-[java-shield]: https://img.shields.io/badge/Java-ED8B00?logo=java&logoColor=white
-[java-url]: https://www.java.com
 [dart-shield]: https://img.shields.io/badge/Dart-%230175C2.svg?logo=dart&logoColor=white
 [dart-url]: https://dart.dev/
 [flutter-shield]: https://img.shields.io/badge/Flutter-%2302569B.svg?logo=Flutter&logoColor=white
