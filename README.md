@@ -30,9 +30,10 @@
   - Scelta del tema (chiaro/scuro)
 - Possibilità di inserimento di domande personalizzate (modificando il file Domande.txt e rispettando le regole di [formattazione](#formattazione-domande)).
 
+<!--
 ### Demo
 #### Desktop
-<!--<table style="border: none">
+<table style="border: none">
   <tr align="center">
     <td><img src="./gfx/[GIF] DesktopEndQuiz.gif" alt="EndQuizGIF"/></td>
     <td><img src="./gfx/[GIF] DesktopTimeout.gif" alt="TimeoutGIF"/></td>
@@ -41,10 +42,10 @@
     <td>Terminazione quiz</td>
     <td>Tempo scaduto</td>
   </tr>
-</table>-->
+</table>
 
 #### Mobile
-<!--<table style="border: none">
+<table style="border: none">
   <tr align="center">
     <td><img width=50% src="./gfx/[GIF] MobileDemo.gif" alt="DemoMobileGIF"/></td>
     <td><img width=50% src="./gfx/[GIF] MobileQuestionList.gif" alt="QuestionListGIF"/></td>
@@ -59,7 +60,7 @@
 
 ### Download
 #### Versione Desktop
-1. Scaricare l'[ultima release](https://github.com/TryKatChup/ML-DM-Quiz/releases/latest) ([Windows](), [Linux]() o [MacOS]()) ed estrarre il contenuto.
+1. Scaricare l'[ultima release](https://github.com/TryKatChup/DMQuiz/releases/latest) ([Windows](), [Linux]() o [MacOS]()) ed estrarre il contenuto.
 2. Eseguire Launcher con doppio click.
 
 #### Versione Mobile
@@ -72,7 +73,7 @@ Le domande sono caricate da un file "<a href="./Domande.txt">Domande.txt</a>" ch
   - la riga di un argomento inizia col carattere speciale '@', seguito dal titolo dell'argomento (es: Complessità). Ogni riga di argomento è seguita dalle domande relative a quell'argomento, fino all'argomento successivo. Alla fine della riga dell'argomento possono essere usati caratteri non alfabetici (ad esempio '=') per separare visivamente le domande di argomenti differenti (tali caratteri verranno ignorati).
 * Domande: 
   - una o più righe per la domanda (in caso di domanda multilinea è necessario aggiungere il carattere di newline '\n' al termine di tutte le righe della domanda, tranne l'ultima);
-  - 4 righe per le risposte (la riga inizia con una lettera maiuscola, seguita da un punto e dalla risposta);
+  - 4 o 5 righe per le risposte (la riga inizia con una lettera maiuscola, seguita da un punto e dalla risposta);
   - una riga per la risposta corretta (una lettera da A a E);
   - una riga vuota se non è l'ultima domanda (questa riga separa la domanda da quella successiva, o dall'argomento successivo).
 
@@ -99,7 +100,13 @@ D. 0.375
 D
 
 @Data Mining ===========================================================================================
-[...]
+Which of the definition below describes the OLAP operation "Pivot"?
+A. Causes an increase in data aggregation and removes a detail level in a hierarchy
+B. Reduces data aggregation and adds a detail level to a hierarchy
+C. Changes the layout, in order to analyse a group of data from a different viewpoint
+D. Creates a link between concepts in interrelated cubes, to compare them
+E. Reduces the number of cube dimensions after setting one of the dimensions to a specific value
+C
 </pre>
 
 ### Contribuire
@@ -146,89 +153,15 @@ Proposta feature:
 </table>
 <!-- readme: contributors -end -->
 
-### Roadmap
-<details>
-<summary>Features da aggiungere e sviluppi futuri:</summary>
-<br/>
-<table>
-  <tr align="center">
-    <td><b>Obbiettivo</b></td>
-    <td width="5%">🖥️</td>
-    <td width="5%">📱</td>
-  </tr>
-  <tr align="center">
-    <td>Visualizzazione lista domande in-app</td>
-    <td>❌</td>
-    <td>✔️</td>
-  </tr>
-  <tr align="center">
-    <td>Possibilità di modificare il file domande</td>
-    <td>✔️</td>
-    <td>❌</td>
-  </tr>
-  <tr align="center">
-    <td>Scelta degli argomenti</td>
-    <td>✔️</td>
-    <td>✔️</td>
-  </tr>
-  <tr align="center">
-    <td>Impostazioni persistenti</td>
-    <td>✔️</td>
-    <td>✔️</td>
-  </tr>
-  <tr align="center">
-    <td>Dark theme</td>
-    <td>✔️</td>
-    <td>✔️</td>
-  </tr>
-  <tr align="center">
-    <td>Verifica aggiornamento domande + download</td>
-    <td>✔️</td>
-    <td>❌</td>
-  </tr>
-  <tr align="center">
-    <td>Verifica aggiornamento app</td>
-    <td>✔️</td>
-    <td>❌</td>
-  </tr>
-  <tr align="center">
-    <td>Deploy su sistemi Android</td>
-    <td> - </td>
-    <td>✔️</td>
-  </tr>
-  <tr align="center">
-    <td>Deploy su sistemi Apple</td>
-    <td>✔️</td>
-    <td>❌</td>
-  </tr>
-  <tr align="center">
-    <td>Test domande duplicate</td>
-    <td>❌</td>
-    <td>❌</td>
-  </tr>
-  <tr align="center">
-    <td>Strumento per inserire nuove domande</td>
-    <td>❌</td>
-    <td>❌</td>
-  </tr>
-  <tr align="center">
-    <td>Template per pubblicare una issue</td>
-    <td>✔️</td>
-    <td>✔️</td>
-  </tr>
-</table>
-
-</details>
-
 ### Built With
 #### Mobile
-Per l'implementazione dell'app mobile ho utilizzato Flutter, come IDE Visual Studio Code (versione 1.64.2).
+Per l'implementazione dell'app mobile ho utilizzato Flutter, come IDE Visual Studio Code (versione 1.72.2).
 
-versione Flutter: 2.8.1<br/>
-versione Dart: 2.15.1
+versione Flutter: 3.3.8<br/>
+versione Dart: 2.18.4
 
 ### Disclaimer
-L'obiettivo dell'applicazione è esercitarsi coi quiz dopo aver studiato la teoria (molto meglio se dal libro, in quanto è completo ed esaustivo). <b>Non mi assumo responsabilità di alcun tipo nel caso di errori nelle domande o nelle risposte, né tantomento nel caso di bocciature potenti</b>. Fatene un buon uso e buona fortuna con l'esame <3
+L'obiettivo dell'applicazione è esercitarsi coi quiz. <b>Non mi assumo responsabilità di alcun tipo nel caso di errori nelle domande o nelle risposte, né tantomento nel caso di bocciature potenti</b>. Fatene un buon uso e buona fortuna con l'esame <3
 
 ### Riferimenti
 * [Ciclo di vita](https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.html) della classe Application
@@ -256,26 +189,24 @@ L'obiettivo dell'applicazione è esercitarsi coi quiz dopo aver studiato la teor
 
 </div>
 
-[downloads-shield]: https://img.shields.io/github/downloads/TryKatChup/ML-DM-Quiz/total
-[downloads-url]: https://github.com/TryKatChup/ML-DM-Quiz/releases/latest
-[contributors-shield]: https://img.shields.io/github/contributors/TryKatChup/ML-DM-Quiz
-[contributors-url]: https://github.com/TryKatChup/ML-DM-Quiz/graphs/contributors
-[domande-shield]: https://img.shields.io/static/v1?label=domande&message=87&color=green
-[domande-url]: https://github.com/TryKatChup/ML-DM-Quiz/blob/main/Domande.txt
-[validazione-shield]: https://github.com/TryKatChup/ML-DM-Quiz/actions/workflows/check_file_domande.yml/badge.svg
-[validazione-url]: https://github.com/TryKatChup/ML-DM-Quiz/actions/workflows/check_file_domande.yml
-[forks-shield]: https://img.shields.io/github/forks/TryKatChup/ML-DM-Quiz
-[forks-url]: https://github.com/TryKatChup/ML-DM-Quiz/network/members
-[repo-size-shield]: https://img.shields.io/github/repo-size/TryKatChup/ML-DM-Quiz
-[repo-size-url]: https://img.shields.io/github/repo-size/TryKatChup/ML-DM-Quiz
-[total-lines-shield]: https://img.shields.io/tokei/lines/github/TryKatChup/ML-DM-Quiz
-[total-lines-url]: https://img.shields.io/tokei/lines/github/TryKatChup/ML-DM-Quiz
-[pull-request-shield]: https://img.shields.io/github/issues-pr/TryKatChup/ML-DM-Quiz
-[pull-request-url]: https://img.shields.io/github/issues-pr/TryKatChup/ML-DM-Quiz
-[stars-shield]: https://img.shields.io/github/stars/TryKatChup/ML-DM-Quiz
-[stars-url]: https://github.com/TryKatChup/ML-DM-Quiz/stargazers
-[issues-shield]: https://img.shields.io/github/issues/TryKatChup/ML-DM-Quiz
-[issues-url]: https://github.com/TryKatChup/ML-DM-Quiz/issues
+[downloads-shield]: https://img.shields.io/github/downloads/TryKatChup/DMQuiz/total
+[downloads-url]: https://github.com/TryKatChup/DMQuiz/releases/latest
+[contributors-shield]: https://img.shields.io/github/contributors/TryKatChup/DMQuiz
+[contributors-url]: https://github.com/TryKatChup/DMQuiz/graphs/contributors
+[domande-shield]: https://img.shields.io/static/v1?label=domande&message=93&color=green
+[domande-url]: https://github.com/TryKatChup/DMQuiz/blob/main/Domande.txt
+[forks-shield]: https://img.shields.io/github/forks/TryKatChup/DMQuiz
+[forks-url]: https://github.com/TryKatChup/DMQuiz/network/members
+[repo-size-shield]: https://img.shields.io/github/repo-size/TryKatChup/DMQuiz
+[repo-size-url]: https://img.shields.io/github/repo-size/TryKatChup/DMQuiz
+[total-lines-shield]: https://img.shields.io/tokei/lines/github/TryKatChup/DMQuiz
+[total-lines-url]: https://img.shields.io/tokei/lines/github/TryKatChup/DMQuiz
+[pull-request-shield]: https://img.shields.io/github/issues-pr/TryKatChup/DMQuiz
+[pull-request-url]: https://img.shields.io/github/issues-pr/TryKatChup/DMQuiz
+[stars-shield]: https://img.shields.io/github/stars/TryKatChup/DMQuiz
+[stars-url]: https://github.com/TryKatChup/DMQuiz/stargazers
+[issues-shield]: https://img.shields.io/github/issues/TryKatChup/DMQuiz
+[issues-url]: https://github.com/TryKatChup/DMQuiz/issues
 [license-shield]: https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg
 [license-url]: https://creativecommons.org/licenses/by-nc-sa/4.0/
 [dart-shield]: https://img.shields.io/badge/Dart-%230175C2.svg?logo=dart&logoColor=white
