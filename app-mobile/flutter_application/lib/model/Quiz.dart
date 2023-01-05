@@ -7,10 +7,6 @@ class Quiz {
   int givenAnswers = 0; // total given answers
   int correctAnswer = 0; // total correct answers
 
-  /*Quiz(List<Question> questions, int qNum, bool shuffleAnswers) {
-    _resetQuiz(questions, qNum, shuffleAnswers);
-  }*/
-
   void resetQuiz(List<Question> questions, int qNum, bool shuffleAnswers) {
     this.questions = [];
     answers = [];

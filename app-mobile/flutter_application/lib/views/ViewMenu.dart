@@ -283,8 +283,7 @@ class ViewMenuState extends State<ViewMenu> {
                                     )
                                   : InkWell(
                                       onTap: () {
-                                        _launchInBrowser(
-                                            "https://github.com/mikyll/ROQuiz");
+                                        _launchInBrowser(Settings.REPO_LINK);
                                       },
                                       child: Container(
                                         color: Colors.indigo.withOpacity(0.35),

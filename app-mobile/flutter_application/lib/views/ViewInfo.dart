@@ -137,9 +137,9 @@ class ViewInfoState extends State<ViewInfo> with TickerProviderStateMixin {
                           style: TextStyle(fontSize: 18))),
                   InkWell(
                     onTap: () {
-                      _launchInBrowser("https://github.com/mikyll/ROQuiz");
+                      _launchInBrowser(Settings.REPO_LINK);
                     },
-                    child: const Text("mikyll/ROQuiz",
+                    child: const Text(Settings.REPO,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 18,
@@ -181,7 +181,7 @@ class ViewInfoState extends State<ViewInfo> with TickerProviderStateMixin {
                   InkWell(
                     onTap: () {
                       _launchInBrowser(
-                          "https://github.com/mikyll/ROQuiz/issues/new?title=[Mobile]+Titolo+Problema&body=Descrivi+qui+il+problema%2C+possibilmente+aggiungendo+una+o+pi%C3%B9+etichette.");
+                          "${Settings.REPO_LINK}/issues/new?title=[Mobile]+Titolo+Problema&body=Descrivi+qui+il+problema%2C+possibilmente+aggiungendo+una+o+pi%C3%B9+etichette.");
                     },
                     child: const Text("Apri una issue",
                         textAlign: TextAlign.center,
@@ -223,7 +223,7 @@ class ViewInfoState extends State<ViewInfo> with TickerProviderStateMixin {
           } else {
             _size = 1.0;
             _increment = 0.0;
-            _launchInBrowser("https://github.com/mikyll/ROQuiz");
+            _launchInBrowser(Settings.REPO_LINK);
           }
         },
         width: _size,

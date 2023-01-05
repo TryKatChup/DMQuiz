@@ -68,21 +68,6 @@ class QuestionRepository {
           k++;
           i++;
         }
-        for (String a in q.answers) {
-          print(a.toString());
-        }
-
-        //while (lines[i].length > 1) {}
-        /*for (int j = 0; j < Settings.DEFAULT_ANSWER_NUMBER; j++) {
-            i++;
-            List<String> splitted = lines[i].split(". ");
-            if (splitted.length != 2 || splitted[1].isEmpty) {
-              throw FileSystemException(
-                  "Riga ${i + 1}: risposta ${String.fromCharCode((j + 65))} formata male");
-            }
-
-            q.addAnswer(splitted[1]);
-          }*/
 
         if (lines[i].isEmpty) {
           throw FileSystemException("Riga ${i + 1}: risposta corretta assente");
@@ -92,13 +77,6 @@ class QuestionRepository {
           throw FileSystemException(
               "Riga ${i + 1}: risposta corretta non valida (numero risposte: $k, risposta corretta indicata: ${lines[i]}.");
         }
-
-        /*int asciiValue = lines[i].codeUnitAt(0);
-          int value = asciiValue - 65;
-          if (value < 0 || value > Settings.DEFAULT_ANSWER_NUMBER - 1) {
-            throw FileSystemException(
-                "Riga ${i + 1}: risposta corretta non valida");
-          }*/
 
         _questions.add(q);
         q.setCorrectAnswerFromInt(lines[i].codeUnitAt(0) - 65);

@@ -2,8 +2,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Settings {
   static const String APP_TITLE = "DMQuiz";
-  static const String APP_VERSION = "1.0_beta";
-  static const String REPO_LINK = "";
+  static const String APP_VERSION = "1.2";
+  static const String REPO = "TryKatChup/DMQuiz";
+  static const String REPO_LINK = "https://github.com/$REPO";
 
   static const int DEFAULT_QUESTION_NUMBER = 10;
   static const int DEFAULT_TIMER = 10;

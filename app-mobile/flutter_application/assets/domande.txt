@@ -567,6 +567,13 @@ D. Creates a link between concepts in interrelated cubes, to compare them
 E. Causes an increase in data aggregation and removes a detail level in a hierarchy
 E
 
+Talking about the general idea of database, which of the following is NOT the purpose of the "Schema on read" strategy?
+A. Possibility to extract data in various shapes
+B. Flexibility for any kind of query
+C. Avoid preprocessing of data before writing
+D. Optimisation for various types of queries
+D
+
 Talking about the general idea of database, what is the meaning of "Schema on read"?
 A. Write the raw data in the database, then at reading time shape then according to the reader's needs
 B. Create a schema for data after reading them from the database
@@ -581,18 +588,25 @@ C. Change the schema of the data after each write
 D. Create a schema for data before writing into the database
 D
 
-Talking about the general idea of database, what is the purpose of "Schema on write" strategy?
+Talking about the general idea of database, which of the following is a purpose of "Schema on write" strategy?
 A. Optimization for specific types of queries
+B. Flexibility and efficiency for any kind of query
+C. Avoid preprocessing of data before writing
+D. None of the others
+A
+
+Talking about the general idea of database, which of the following is a purpose of "Schema on write" strategy?
+A. Flexibility and efficiency for any kind of query
 B. Clean design of the data structure
 C. Avoid preprocessing of data before writing
-D. Flexibility and efficiency for any kind of query
+D. None of the others
 B
 
 In which part of the CRISP methodology we perform the test design activity?
 A. Data Understanding
 B. Evaluation
 C. Business Understanding
-D. Modelling
+D. Modeling
 D
 
 Which of the definition below describes the OLAP operation "Drill-Down"?
@@ -611,8 +625,64 @@ D. Which are the resources available (manpower, hardware, software, ...)
 D
 
 Which operations are in the correct sequence?
-A. Extraction - Cleansing - Transformation - Loading
-B. Extraction -  Transformation - Cleansing - Loading
-C. Extraction - Cleansing - Loading - Transformation
-D. Transformation - Extraction - Cleansing - Loading
+A. Extraction, Cleansing, Transformation, Loading
+B. Extraction, Transformation, Cleansing, Loading
+C. Loading, Cleansing, Extraction, Transformation
+D. Transformation, Extraction, Cleansing, Loading
+E. Loading, Transformation, Cleansing, Extraction
 A
+
+Which of the following sentences does NOT describe an advantage of a Data Warehouse with respect to a standard DBMS?
+A. Allows analysis along the time dimension
+B. Manages efficiently data updates
+C. Allows efficient execution of multi-dimensional queries
+D. Has tools for helping to solve inconsistencies
+B
+
+Which of the following sentences does NOT describe an advantage of a Data Warehouse with respect to a standard DBMS?
+A. Allows analysis along the time dimension
+B. Allows efficient execution of multi-dimensional queries
+C. Allows efficient execution of key-based queries
+D. Has tools for helping to solve inconsistencies
+C
+
+What is the ranking for the following technologies, based on the increasing level of abstraction?\n
+Technologies:\n
+- OLAP analysis on Data Mart\n
+- Data Mining on operational databases;\n
+- SQL queries on operational databases;\n
+Order: from left (it generates the most specific information) to right (it has a higher level of knowledge).
+A. Data Mining, OLAP analysis, SQL queries
+B. OLAP analysis, Data Mining, SQL queries
+C. SQL queries, OLAP analysis, Data Mining
+D. OLAP analysis, SQL queries, Data Mining
+E. SQL queries, Data Mining, OLAP analysis
+C
+
+Which one of the following sentences does NOT describe a characteristic of a Data Warehouse?
+A. Non volatile
+B. Includes the time dimension
+C. Constantly updated as soon as the base data are updated
+D. Solves the inconsistencies
+C
+
+Which one of the following sentences does NOT describe a characteristic of a Data Warehouse?
+A. Non volatile
+B. Includes the time dimension
+C. Solves the inconsistencies
+D. Includes all the base data in their native format
+D
+
+Which of the following are NOT typical data warehouse queries?
+A. What is the total revenue of yesterday in shop "BO03"?
+B. Which products maximize the profit?
+C. What is the relationship between profits gained by products "WWW" and "ZZZ"?
+D. What is the total revenue per product category and state?
+A
+
+Which of the following are NOT typical data warehouse queries?
+A. What is the total revenue per product category and state?
+B. Which products maximize the profit?
+C. Which is the stock of product "XXX" in the "YYY" warehouse?
+D. What is the relationship between profits gained by products "WWW" and "ZZZ"?
+C

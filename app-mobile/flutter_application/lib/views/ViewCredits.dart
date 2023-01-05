@@ -42,11 +42,29 @@ class ViewCredits extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Expanded(
-                          child: Text("Build macOS e iOS:",
+                          child: Text("Formattazione file domande:",
                               style: TextStyle(fontSize: 18)),
                         ),
                         Column(
                           children: [
+                            Row(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    _launchInBrowser(
+                                        "https://github.com/Mikyll");
+                                  },
+                                  child: const Text("Mikyll",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          decoration:
+                                              TextDecoration.underline)),
+                                ),
+                                const Text(" &",
+                                    style: TextStyle(fontSize: 18)),
+                              ],
+                            ),
                             Row(
                               children: [
                                 InkWell(
@@ -67,54 +85,9 @@ class ViewCredits extends StatelessWidget {
                             ),
                             InkWell(
                               onTap: () {
-                                _launchInBrowser(
-                                    "https://github.com/Federicoand98");
+                                _launchInBrowser("https://github.com/Noesh");
                               },
-                              child: const Text("Federyeeco",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      decoration: TextDecoration.underline)),
-                            ),
-                          ],
-                        ),
-                      ]),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Expanded(
-                          child: Text("Spiegazione domande:",
-                              style: TextStyle(fontSize: 18)),
-                        ),
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                InkWell(
-                                  onTap: () {
-                                    _launchInBrowser(
-                                        "https://github.com/lollofred");
-                                  },
-                                  child: const Text("LolloFred",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          decoration:
-                                              TextDecoration.underline)),
-                                ),
-                                const Text(" &",
-                                    style: TextStyle(fontSize: 18)),
-                              ],
-                            ),
-                            InkWell(
-                              onTap: () {
-                                _launchInBrowser(
-                                    "https://github.com/filippoveronesi");
-                              },
-                              child: const Text("filovero98",
+                              child: const Text("Noesh",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontSize: 18,
