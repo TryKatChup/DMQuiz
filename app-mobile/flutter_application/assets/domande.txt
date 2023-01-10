@@ -211,7 +211,7 @@ C
 Which is the main reason for the standardization of numeric attributes?
 A. Change the distribution of the numeric attributes, in order to obtain gaussian distributions
 B. Map all the numeric attributes to a new range such that the mean is zero and the variance is one
-C. Mapp all the nominal attributes to the same range, in order to prevent the values with higher frequency from having prevailing influence
+C. Map all the nominal attributes to the same range, in order to prevent the values with higher frequency from having prevailing influence
 D. Remove non-standard values
 B
 
@@ -239,7 +239,7 @@ A
 What is the meaning of the statement "the support is anti-monotone"?
 A. The support of an itemset never exceeds the support if its subsets
 B. The support of an itemset is always smaller than the support of its supersets
-C. The support of an itemsets never exceeds the support if its supersets
+C. The support of an itemset never exceeds the support if its supersets
 D. The support of an itemset is always smaller than the support of its subsets
 A
 
